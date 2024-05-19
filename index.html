@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<link rel="shortcut icon" href="img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>
+	<!--<script src="lib/jquery-3.7.1.min.js"></script>-->
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/index.css" />
+	<title>Deep Dark Lab</title>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" href="index.html">
+                    <img src="img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="archive.html" class="tag" id="tag">存档</a>
+                    <a href="project.html" class="tag" id="tag">项目</a>
+                    <a href="about.html" class="tag" id="tag">关于</a>
+                    <a href="login.html" class="tag" id="tag">会员登陆</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="first-stack">
+        <div class="intro">
+            <div class="welcome">
+                <div class="pre-title">欢迎访问</div>
+                <div class="title main-title">Deep Dark Lab</div>
+                <div class="title">官方门户网站</div>
+                <div class="discription">
+                    我做东方鬼畜音Mad，好吗</br>
+                    Deep Dark Fantasies
+                </div>
+            </div>
+            <div class="links">
+                <a href="about.html" class="about">了解 Deep Dark Lab</a>
+            </div>
+        </div>
+        <div class="logo-zone">
+            <img src="img/Aperture-logo.png" alt="" class="right-logo">
+        </div>
+    </div>
+    <div class="slogan-zone">
+        <div class="slogan">"Do you like <spam style="color: rgb(102, 104, 218);">Van</spam> 游戏?"
+            </br><a href="archive.html" class="archive-link" style="margin-top: 30px;display: block;"><spam style="color: rgb(68, 68, 68);">> 访问我们的</spam> Minecraft存档库</a>
+        </div>
+        <div class="avatar-zone">
+            <a href="about.html"><img class="avatar" src="img/van-avater.png" alt=""></br>
+            <spam class="avatar-intro"><spam style="color:rgb(47, 47, 187)">Dr.</spam> Van Darkholme</spam>
+            </a>
+        </div>
+    </div>
+    <div class="divider"><div class="sub-divider"></div></div>
+    <div class="stack2">
+        <div class="content">
+            <div class="name">服务器信息查询</div>
+            <div class="title">快捷查询</br>无需登录</div>
+            <div class="discription">通过API接口查询服务器信息，</br>支持查询服务器名称，玩家列表，服务端版本等信息。</div>
+            <div class="links"><a href="server-query.html" class="link-button">敬请期待</a></div>
+            
+        </div>
+        <img class="image-back" src="img/webquery.png" alt=""><img class="image" src="img/Chain_Command_Block.webp" alt="" id="command_block">
+    </div>
+    <div class="stack3">
+        <div class="content">
+            <div class="title">存档库</div>
+            <div class="discription">通过云端存储备份</br>提供<spam style="color: rgb(131, 40, 216);">高速下载</spam></div>
+            <div class="top-card-area">
+                <div class="top-card">
+                    <h3 class="card-name">存档备份</h3>
+                    <div class="card-discription">存档留在云端,<br>&nbsp&nbsp备份更安全。</div>
+                </div>
+            </div>
+            <div class="subcard-area">
+                <div class="subcard1">
+                    <h3 class="card-name">阿里云盘提供支持</h3>
+                    <div class="card-discription">不限速,<br><spam style="color: rgb(154, 162, 226);">下载更快。</spam></div>
+                    <img src="img/aliyun1.png" alt="" class="aliyun-img">
+                    
+                </div>
+                <!--<div class="subcard2">
+                    <h3 class="card-name">感觉不如原神</h3>
+                    <div class="card-discription">该写什么<br>其实，<br>我也不知道。</spam></div>                   
+                </div>-->
+                <div class="subcard2">
+                    <h3 class="card-name">模组安装</h3>
+                    <div class="card-discription">地图所需模组<br>一键<spam style="color: rgb(206, 149, 63);">同步</spam>。</div>  
+                    <img src="img/Java-Logo.png" alt="" class="java-logo-img">
+                                     
+                </div>
+            </div>
+            <div class="links"><a href="archive.html" class="link-button">全部Minecraft存档 ></a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <spam class="copyright">Copyright © 2024 Deep Dark Lab 保留所有权利。</spam>
+            <spam class="footer-tags">
+                <a href="https://ys.mihoyo.com/">友情链接</a>
+                <a href="https://ys.mihoyo.com/">使用条款</a>
+                <a href="https://ys.mihoyo.com/">隐私政策</a>
+            </spam>
+        </div>
+    </div>
+</body>
+<script>
+	var isVisible = false;
+	
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[id=tag]").css("color","white");
+            $('#logo').attr("src","img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[id=tag]").css("color","black");
+            $('#logo').attr("src","img/deepdarklab_b.png");
+		}
+	});
+    var isVisible1 = false;
+	
+	$(window).scroll(function(){
+		var shouldBeVisible1 = $(window).scrollTop()>980;
+		if (shouldBeVisible1 && !isVisible1) {
+			isVisible1 = true;
+            $('#command_block').attr("src","img/Impulse_Command_Block.webp");
+		} else if (isVisible1 && !shouldBeVisible1) {
+			isVisible1 = false;
+            $('#command_block').attr("src","img/Chain_Command_Block.webp");
+		}
+	});
+</script>
+<script>
+    // Define the API URL
+const apiUrl = 'https://api.mcsrvstat.us/3/mc.hypixel.net';
+
+// Make a GET request
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
