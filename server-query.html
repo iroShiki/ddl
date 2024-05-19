@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<link rel="shortcut icon" href="img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>
+	<!--<script src="lib/jquery-3.7.1.min.js"></script>-->
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/server-query.css" />
+	<title>Deep Dark Lab</title>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" href="index.html">
+                    <img src="img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="index.html" class="tag" id="tag">首页</a>
+                    <a href="archive.html" class="tag" id="tag">存档</a>
+                    <a href="project.html" class="tag" id="tag">项目</a>
+                    <a href="about.html" class="tag" id="tag">关于</a>
+                    <a href="login.html" class="tag" id="tag">会员登陆</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="title-area">
+        <div class="info">
+            <img src="img/deepdarklab_w.png" alt="" class="logo">
+            <div class="title">Minecraft服务器<br>信息查询系统<spam style="font-size: 50%;">(开发中)</spam></div>
+            <div class="discription">通过API接口查询服务器状态信息，支持查询包括服务器在线人数，<br>在线名单，服务端版本，所需模组，游玩模式等信息。</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="query-title"><img src="img/mc-icons/command-block.png" alt="" class="query-img"> 服务器信息查询</div>
+    <div class="query-subtitle">
+        <div class="left"><img src="img/mc-icons/magnifying-glass.png" alt="" class="query-img"> 查询条目</div>
+        <div class="right"><img src="img/mc-icons/book.png" alt="" class="query-img"> 查询结果</div>
+    </div>
+    <div class="query-area">
+        <div class="query-item">
+            <div class="name" id="query-tag">服务器名称</div>
+            <div class="player" id="query-tag">在线人数</div>
+            <div class="gamemode" id="query-tag">游戏模式</div>
+            <div class="version" id="query-tag">服务端版本</div>
+            <div class="mods" id="query-tag">所需模组</div>
+            <div class="player-list" id="query-tag">在线玩家列表</div>
+        </div>
+        <div class="query-result">
+            <div class="r-name" id="r-query-tag">#</div>
+            <div class="r-player" id="r-query-tag">#</div>
+            <div class="r-gamemode" id="r-query-tag">#</div>
+            <div class="r-version" id="r-query-tag">#</div>
+            <div class="r-mods" id="r-query-tag">#</div>
+            <div class="r-player-list" id="r-query-tag">#</div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <spam class="copyright">Copyright © 2024 Deep Dark Lab 保留所有权利。</spam>
+            <spam class="footer-tags">
+                <a href="https://ys.mihoyo.com/">友情链接</a>
+                <a href="https://ys.mihoyo.com/">使用条款</a>
+                <a href="https://ys.mihoyo.com/">隐私政策</a>
+            </spam>
+        </div>
+    </div>
+</body>
+<script>
+	var isVisible = false;
+	
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[id=tag]").css("color","white");
+            $('#logo').attr("src","img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[id=tag]").css("color","black");
+            $('#logo').attr("src","img/deepdarklab_b.png");
+		}
+	});
+</script>
+<script>
+    // Define the API URL
+const apiUrl = 'https://api.mcsrvstat.us/3/mc.hypixel.net';
+
+// Make a GET request
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
