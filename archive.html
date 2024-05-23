@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<link rel="shortcut icon" href="img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>
+	<!--<script src="lib/jquery-3.7.1.min.js"></script>-->
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/archive.css" />
+	<title>Deep Dark Lab</title>
+	<style>
+		body{
+			background-color: #1b1b1b;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="top-bar">
+		<div class="banner">
+			<a href="index.html">
+				<img class="logo"src="img/deepdarklab_white.png">
+			</a>
+			<img src="img/archive-title-1.png"alt="nerv" style="width:18%;margin-left:3%;display:inline-block;margin-bottom: 1.5%;">
+			<img src="img/nerv2.png"alt="nerv" style="float:right; width:5%;margin-right:10%;margin-top:25px;">
+			<div class="intro">Deep&nbsp•&nbspDark&nbsp•&nbspFantasies</div>
+		</div> 
+
+		<div class="nav">
+			<a class="tag" href="index.html">主页</a>
+			<a class="tag" href="archive.html">存档</a>
+			<a class="tag" href="project.html">项目</a>
+			<a class="tag" href="about.html">关于</a>
+			<a class="login" id="login" href="login.html" onclick="sidebarvisible()">会员登录</a>
+			<script>
+				function myFunction()
+				{
+					document.getElementById("login").innerHTML="功能开发中";
+				}
+				</script>
+		</div>
+	</div>
+	<div class="side-bar">
+		<div id="pre-logo">
+			<img class="pre-logo" src="img/Aperture-Science-Symbol.png">
+		</div>
+		<div class="side-bar-content" id="side-bar-content">
+			<div>
+				<a href="index.html">
+					<img class="logo"src="img/deepdarklab_white.png">
+				</a>
+			</div>
+			<div class="tag-list" id="tag-list">
+				<a href="archive.html">存档</a>
+				<a href="project.html">项目</a>
+				<a href="about.html">关于</a>
+			</div>
+		</div>
+		<div class="copyright">Copyright © 2077 Deep Dark Lab</br>保留所有权利。</div>
+	</div>
+	<div class="main">
+		<a class="back-to-legacy" href="archive-legacy.html" >返回旧版</a>
+		<div class="article-list">
+				<div class="top-title" style="font-size: 220%; font-weight: bold; margin-bottom: 0; margin-left: 1%; margin-top: 1%;"></div>
+				<div class="world" style="background-image:linear-gradient(to left, rgba(255,255,255,0), rgb(0, 0, 0)),url(img/world1.jpg);">
+					<div class="info">
+						<div class="sn">存档#1</div>
+						<div class="title">Sakura No Gensokyo</div>
+						<div class="article">版本：1.20.4<br>
+							建议模组：静谧四季, 结构变体<br>
+							兼容性：Fabric
+						</div>
+						<div class="download">
+							<a href="#"  class="button">下载存档</a>
+							<p class="download-source">下载源：阿里云盘</p>
+						</div>
+					</div>	
+				</div>
+				<div class="world" style="background-image:linear-gradient(to left, rgba(255,255,255,0), rgb(0, 0, 0)),url(img/world2.jpg);">
+					<div class="info">
+						<div class="sn">存档#2</div>
+						<div class="title">Deep In Abyss</div>
+						<div class="article">版本：1.19.2<br>
+							建议模组：静谧四季<br>
+							兼容性：Forge
+						</div>
+						<div class="download">
+							<a href="#"  class="button">下载存档</a>
+							<p class="download-source">下载源：阿里云盘</p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</body>
+<footer>
+</footer>
+</html>
+<script>
+	var isVisible = false;
+	
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>200;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#side-bar-content').fadeIn();
+			$('#pre-logo').hide();
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#side-bar-content').hide();
+			$('#pre-logo').fadeIn();
+		}
+	});
+</script>
+<script>
+	function sidebarvisible()
+	{
+		document.getElementById("tag-list").style.display = "none";
+	}
+</script>
