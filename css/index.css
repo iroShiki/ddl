@@ -58,7 +58,7 @@ a{
     display: flex;
     align-items: center;
 }
-.first-stack{
+.section-welcome{
     max-width: 1200px;
     width:90%;
     padding-top: 185px;
@@ -111,7 +111,7 @@ a{
     padding: 3.4% 10% ;
     padding-top: 2.5%;
 }
-.logo-zone{
+.logo-container{
     display: flex;
     justify-content: center;
     width:35%;
@@ -145,7 +145,7 @@ a{
     50%{width:80%;height: 81%; }
     90%{width:78%;height: 80%;}
 }
-.slogan-zone{
+.slogan-container{
     margin-bottom: 1%;
     padding: 1.8% 0px;
     border-radius: 30px;
@@ -176,7 +176,7 @@ a{
 .archive-link:hover{
     color: rgb(139, 83, 190);
 }
-.avatar-zone{
+.avatar-container{
     margin-right: 5%;
     text-align: center;
     
@@ -199,20 +199,20 @@ a{
     display: block; 
     margin-top: 5%;
 }
-.divider{
+.divider-container{
     width:100%;
     height:50px;
     /*background-color: rgb(21, 20, 71);*/
     background-color: rgb(25, 24, 87);
 }
-.sub-divider{
+.divider{
     width: 100%;
     height: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgb(255, 255, 255);
 }
-.stack2{
+.section-server-query{
     padding-top: 100px;
     padding-bottom: 550px;
     background-image: linear-gradient(to bottom, rgb(25, 24, 87),rgb(63, 22, 82));
@@ -222,7 +222,7 @@ a{
     justify-content: center;
     position: relative;
 }
-.stack2 .content{
+.section-server-query .content{
     display: flex;
     display: inline-block;
     max-width: 1200px;
@@ -230,24 +230,24 @@ a{
     justify-content: center;
     text-align: center;
 }
-.stack2 .name{
+.section-server-query .pre-title{
     color: rgb(233, 179, 98);
     font-size: 120%;
     font-weight: bold;
 }
-.stack2 .title{
+.section-server-query .title{
     margin-top: 10px;
     color: rgb(255, 255, 255);
     font-size: 300%;
     font-weight: bold;
 }
-.stack2 .discription{
+.section-server-query .discription{
     margin-top: 30px;
     color: rgb(255, 255, 255);
     font-size: 120%;
     font-weight: bold;
 }
-.stack2 .link-button{
+.section-server-query .link-button{
     padding: 12px 24px;
     background-color: aliceblue;
     font-size: 100%;
@@ -256,17 +256,17 @@ a{
     display: inline-block;
     border-radius: 30px;
 }
-.stack2 .image{
+.section-server-query .image{
     height:420px;
     position: absolute;
     bottom: 30px;
 }
-.stack2 .image-back{
+.section-server-query .image-back{
     height:180px;
     position: absolute;
     bottom: 320px;
 }
-.stack3{
+.section-archive{
     height:1700px;
     width:100%;
     background-color: rgb(245, 245, 245);
@@ -274,7 +274,7 @@ a{
     display: flex;
     
 }
-.stack3 .content{
+.section-archive .content{
     display: flex;
     display: inline-block;
     max-width: 1200px;
@@ -282,27 +282,27 @@ a{
     justify-content: center;
     align-items: center;
 }
-.stack3 .title{
+.section-archive .title{
     font-size:150%;
     font-weight:bold ;
     text-align: center;
     margin-top: 140px;
 }
-.stack3 .discription{
+.section-archive .discription{
     font-size:380%;
     font-weight:bold ;
     padding-top: 20px;
     line-height: 1.2;
     text-align: center;
 }
-.stack3 .top-card-area{
+.section-archive .top-card-container{
     width:100%;
     height:530px;
     justify-content: center;
     display: flex;
     margin-top: 80px;
 }
-.stack3 .top-card{
+.section-archive .top-card{
     background-color: black;
     width:90%;
     height: 100%;
@@ -333,14 +333,14 @@ a{
     line-height: 1.4;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
-.stack3 .subcard-area{
+.section-archive .subcard-container{
     width:100%;
     height:540px;
     justify-content: center;
     display: flex;
     margin-top: 10px;
 }
-.stack3 .subcard1{
+.section-archive .subcard1{
     background-color:rgb(26, 29, 48);
     width:44.9%;
     height: 99%;
@@ -369,7 +369,7 @@ a{
     letter-spacing: .021em;
     line-height: 1.25;
 }
-.stack3 .subcard2{
+.section-archive .subcard2{
     margin-left: 1%;
     background-color: rgb(255, 255, 255);
     width:44.9%;
@@ -403,11 +403,11 @@ a{
     letter-spacing: .021em;
     line-height: 1.25;
 }
-.stack3 .links{
+.section-archive .links{
     text-align: center;
     margin-top: 35px;
 }
-.stack3 .link-button{
+.section-archive .link-button{
     display: inline-block;
     padding: 20px 27px;
     background-color: rgb(219, 219, 219);
@@ -417,7 +417,7 @@ a{
     font-weight: bold;
     font-family: simhei;
 }
-/*.stack3 .subcard2{
+/*.section-archive .subcard2{
     margin-left: 1%;
     background-color: rgb(255, 255, 255);
     width:39.5%;
@@ -445,7 +445,7 @@ a{
     margin-top: 42%;
     letter-spacing: .021em;
 }
-.stack2 .subcard2{
+.section-server-query .subcard2{
     margin-left: 1%;
     background-color: rgb(76, 45, 134);
     width:39.5%;
