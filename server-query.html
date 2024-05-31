@@ -42,6 +42,7 @@
                     <a href="about.html" class="menu-tag" id="tag">关于</a>
                     <a href="login.html" class="menu-tag" id="tag">会员登入</a>
                     <a href="en/project.html" class="menu-tag" id="tag">EN</a>
+                    <img class="menu-logo" src="img/nerv2.png" alt="">
                 </div>
               </div>
         </div>
@@ -109,19 +110,27 @@ serverquery()
 </script>
 <script>
 	var isVisible = false;
-	
+    const mediaQuery = window.matchMedia('(min-width: 850px)')
 	$(window).scroll(function(){
 		var shouldBeVisible = $(window).scrollTop()>20;
 		if (shouldBeVisible && !isVisible) {
 			isVisible = true;
-			$('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
-            $('[id=menu]').css("background-color","rgba(0, 0, 0, 0.7)");
+            if (mediaQuery.matches) {
+                $('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
+            }
+            else{
+                $('[id=nav]').css("background-color","rgb(36, 36, 36)");
+            }
+            $('[id=menu]').css("background-color","rgba(45, 45, 45)");
             $("[id=tag]").css("color","white");
             $('#logo').attr("src","img/deepdarklab_w.png");
 		} else if (isVisible && !shouldBeVisible) {
 			isVisible = false;
+            if (mediaQuery.matches) {
 			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
-            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
+            }
+            else{$('[id=nav]').css("background-color","rgb(255, 255, 255)");}
+            $('[id=menu]').css("background-color","rgba(245, 245, 245)");
             $("[id=tag]").css("color","black");
             $('#logo').attr("src","img/deepdarklab_b.png");
 		}
