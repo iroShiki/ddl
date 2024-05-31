@@ -54,7 +54,7 @@ a{
     width: 10%;
 }
 .nav .logo{
-    width: 300%;
+    width: 130px;
     padding-left: 20px;
 }
 .tag{
@@ -98,9 +98,9 @@ a{
 .menu-tag{
     display: block;
   }
-.dropdown:hover .dropdown-content {
-    display: block;
-  }
+.menu-close-button{
+    display: none;
+}
 .title-container{
     width: 90%;
     max-width: 1200px;
