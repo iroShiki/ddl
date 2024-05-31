@@ -131,6 +131,11 @@ a{
     font-size: 80%;
     font-weight: bold;
     margin-top: 20px;
+    white-space: pre-line;
+    padding-right: 5%;
+    br {
+        display: none;
+    }
 }
 .divider{
     margin-top: 20px;
