@@ -33,7 +33,8 @@
                 </div>             
             </div>
             <div class="dropdown">
-                <span id="tag">☰</span>
+                <span id="tag" class="menu-open-button" onclick="menu_open()">☰</span>
+                <span id="tag" class="menu-close-button" onclick="menu_close()">✖</span>
                 <div class="dropdown-content" id="menu">
                     <a href="index.html" class="menu-tag" id="tag">首页</a>
                     <a href="archive.html" class="menu-tag" id="tag">存档</a>
@@ -127,5 +128,14 @@ serverquery()
 	});
 </script>
 <script>
-
+    function menu_open(){
+        $('.menu-open-button').css('display','none');
+        $('.menu-close-button').css('display','block');
+        $('.dropdown-content').css('display','block');
+    }
+    function menu_close(){
+        $('.menu-open-button').css('display','block');
+        $('.menu-close-button').css('display','none');
+        $('.dropdown-content').css('display','none');
+    }
 </script>
