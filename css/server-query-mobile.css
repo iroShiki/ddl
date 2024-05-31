@@ -154,14 +154,15 @@ a{
 }
 #r-name{font-size: 60%;}
 .query-subtitle{
-    width: 60%;
-    margin-right: 7%;
+    width: 90%;
     max-width: 1200px;
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     font-size: 110%;
+    .left{width: 40%; text-align: center;}
+    .right{width: 60%; text-align: center;}
 }
 .query-img{
     height:20px;
