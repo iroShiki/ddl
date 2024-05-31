@@ -70,6 +70,9 @@ a{
     display: flex;
     align-items: center;
 }
+.dropdown{
+    display: none;
+}
 .title-container{
     width: 90%;
     max-width: 1200px;
