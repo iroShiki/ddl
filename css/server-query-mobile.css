@@ -149,7 +149,7 @@ a{
     max-width: 1200px;
     text-align: center;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 110%;
     margin-top: 20px;
 }
 #r-name{font-size: 60%;}
@@ -160,7 +160,7 @@ a{
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 110%;
+    font-size: 105%;
     .left{width: 40%; text-align: center;}
     .right{width: 60%; text-align: center;}
 }
