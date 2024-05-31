@@ -149,7 +149,7 @@ a{
 #r-name{font-size: 60%;}
 .query-subtitle{
     width: 60%;
-    margin-right: 10%;
+    margin-right: 7%;
     max-width: 1200px;
     margin-top: 25px;
     display: flex;
@@ -312,11 +312,11 @@ a{
 }
 .copyright{
     display: block;
-    margin-left: 10%;
+    margin-left: 6%;
 }
 .footer-tags{
     display: block;
-    margin-left: 10%;
+    margin-left: 6%;
 }
 .footer-tags a{
     margin-left: 0;
