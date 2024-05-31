@@ -1,0 +1,327 @@
+@media screen and (max-width: 850px){
+body {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+@font-face {
+    font-family: 'Minecraft R';
+    src: url('../lib/1_Minecraft-Regular.otf');
+}
+@font-face {
+    font-family: 'minecraft';
+    src: url('../lib/5_Minecraft AE.ttf');
+}
+button{
+    border: none;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    backdrop-filter: blur(50px);
+    width:100;
+    height:60px;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.575);
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav-content{
+    max-width: 1200px;
+    position: absolute;
+    top:0px;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 100%;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+.nav .logo{
+    width: 300%;
+}
+.tag{
+    font-size: 14px;
+    
+    padding: 0px 10px;
+    -webkit-transition: color 100ms linear;
+    -ms-transition: color 100ms linear;
+    transition: color 100ms linear;
+}
+.tag:hover{
+    color:rgb(0, 0, 0)
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+.tag-list{
+    display:none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    padding: 10px 10px;
+    z-index: 1;
+    margin-top:21px;
+    text-align: center;
+    right: -50%;
+    backdrop-filter: blur(50px);
+    line-height: 3;
+  }
+.menu-tag{
+    display: block;
+  }
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+.title-container{
+    width: 90%;
+    max-width: 1200px;
+    height:230px;
+    background-color: rgb(0, 0, 27);
+    margin-top: 80px;
+    border-radius: 30px;
+    background-image: linear-gradient(to left, rgba(255,255,255,0),rgba(0, 0, 0, 0.747), rgb(0, 0, 0)),url(../img/minecraft-server.jpg);
+    background-size: cover;
+}
+.title-container .info{
+    margin-left: 50px;
+    height:120%;
+}
+.title-container .logo{
+    height:3%;
+    margin-top: 40px;
+    margin-left: 4px;
+}
+.title-container .title{
+    margin-top: 10px;
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+}
+.title-container .discription{
+    color: rgb(184, 182, 196);
+    font-size: 80%;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.divider{
+    margin-top: 20px;
+    width:80%;
+    max-width: 1300px;
+    background-color: rgba(0, 0, 0, 0.089);
+    height:1px;
+}
+.query-title{
+    width:90%;
+    max-width: 1200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    margin-top: 20px;
+}
+#r-name{font-size: 60%;}
+.query-subtitle{
+    width: 60%;
+    margin-right: 10%;
+    max-width: 1200px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 110%;
+}
+.query-img{
+    height:20px;
+}
+.query-container{
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-around;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.055);
+    margin-bottom: 30px;
+}
+.query-item{
+    width:40%;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 12px;
+    border-radius: 15px;
+    
+}
+.query-tag,.r-query-tag{
+    display: block;
+    margin:10px 0;
+    width:100%;
+    height: 65px;
+    margin: 1px rgba(0, 0, 0, 0.253);
+    font-size: 105%;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.068);
+    z-index:1;
+    background-size: 41px 41px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: minecraft;
+}
+.r-query-tag{
+    background-color: rgb(255, 255, 255);
+}
+.query-tag{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.query-result{
+    width:60%;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 12px;
+    border-radius: 15px;
+}
+.name{background-image: url(../img/mc-icons/name-tag.png); background-color: rgb(133, 83, 179);}
+.player{background-image: url(../img/mc-icons/player-head.png);background-color: rgb(85, 83, 179);}
+.online{background-image: url(../img/mc-icons/diamond-pickaxe.png);background-color: rgb(179, 94, 83);}
+.version{background-image: url(../img/mc-icons/crafting-table.png);background-color: rgb(179, 137, 83);}
+.mods{background-image: url(../img/mc-icons/anvil.png);background-color: rgb(179, 83, 155);}
+.player-list{background-image: url(../img/mc-icons/bed.png);background-color: rgb(117, 83, 179);}
+.query-button{
+    padding:16px 0px;
+    color: rgb(24, 24, 24);
+    font-weight: bold;
+    background-color: rgb(202, 202, 202);
+    border-radius:30px;
+    outline:none;
+    font-family: simhei;
+    font-size: 101%;
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+    width:145px;
+    display: flex;
+    justify-content: center;
+}
+#button-icon{
+    height:19px;
+    display: none;
+    align-content: center;
+}
+#button-text{display: inline-block;}
+.query-button-container{
+    margin-bottom: 60px;
+}
+.about-link{
+    font-weight: bold;
+    margin-left: 5px;
+    color: rgb(102, 102, 102);
+    font-size: 70%;
+    display:none;
+}
+.query-button:hover{
+    background-color: rgb(173, 173, 173);
+}
+.query-button:active{
+    background-color: rgb(150, 150, 150);
+}
+.pop-up {
+    display:none;
+    position : fixed;
+	left : 50%;
+	top : 50%;
+	width : 810px;
+	height : 270px;
+	margin-left : -405px; /*一半的高度*/
+	margin-top : -135px;
+    background: white;
+    border-radius: 30px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.452);
+}
+.pop-up .title{
+    font-size: 110%;
+    margin-left: 90px;
+    margin-top: 68px;
+    font-weight: bold;
+}
+.pop-up .content{
+    margin-left: 90px;
+    margin-top: 20px;
+    font-size: 105%;
+    line-height: 1.7;
+    font-weight: bold;
+}
+.pop-up-close{
+    color: white;
+    font-size: 105%;
+    text-align: center;
+    margin-top: 0.3%;
+    margin-left: 47%;
+    display: inline-block;
+    padding: 14px 19px;
+    border-radius: 30px;
+    background-color: rgb(60, 60, 122);
+}
+.pop-up:target {
+    display: block;
+}
+.footer-content{
+    margin-top: 60px;
+    max-width: 1200px;
+    width:90%;
+    color: white;
+    display: block;
+}
+.footer{
+    width:100%;
+    height:170px;
+    background-color: rgb(36, 36, 36);
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    display: block;
+    margin-left: 50px;
+}
+.footer-tags{
+    display: block;
+    margin-left: 50px;
+}
+.footer-tags a{
+    margin-left: 0;
+    margin-right: 30px;
+    color: white;
+    display: inline-block;
+    padding-top: 15px;
+}
+}
