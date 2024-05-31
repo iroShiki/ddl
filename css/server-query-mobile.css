@@ -58,8 +58,7 @@ a{
     padding-left: 20px;
 }
 .tag{
-    font-size: 14px;
-    
+    font-size: 14px;   
     padding: 0px 10px;
     -webkit-transition: color 100ms linear;
     -ms-transition: color 100ms linear;
@@ -79,6 +78,7 @@ a{
     position: relative;
     display: inline-block;
     padding-right: 20px;
+    font-size: 120%;
   }
   
 .dropdown-content {
@@ -312,11 +312,11 @@ a{
 }
 .copyright{
     display: block;
-    margin-left: 50px;
+    margin-left: 10%;
 }
 .footer-tags{
     display: block;
-    margin-left: 50px;
+    margin-left: 10%;
 }
 .footer-tags a{
     margin-left: 0;
