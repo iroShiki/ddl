@@ -23,11 +23,11 @@ function serverquery(){
         outputElementName.innerHTML= motdtocolor(motd,outputElementName);
         outputElementPlayer.textContent = JSON.stringify(data.players.online, null, 2);
         var online = JSON.stringify(data.online, null, 2);
-        if(online == 'true'){outputElementOnline.textContent ='✔存活确认'}
-        else{outputElementOnline.textContent ='✖回归虚无'}
+        if(online == 'true'){outputElementOnline.textContent ='✔Active'}
+        else{outputElementOnline.textContent ='✖Inactive'}
         outputElementVersion.textContent = JSON.stringify(data.version, null, 2);
         var mod = JSON.stringify(data.mods, null, 2);
-        if(!mod){outputElementMods.textContent='未查询到Mod'}
+        if(!mod){outputElementMods.textContent='Not found'}
         else{outputElementMods.textContent=JSON.stringify(data.mods, null, 2)}
         if(!!data.players.list){
             for (var i=0;i<data.players.list.length;i++)
@@ -36,7 +36,7 @@ function serverquery(){
             }
             outputElementPlayerList.textContent = player;
         }
-        else{outputElementPlayerList.textContent ='无在线玩家'}
+        else{outputElementPlayerList.textContent ='No Player Online'}
     })
     .catch(error => {
         console.error('Error:', error);

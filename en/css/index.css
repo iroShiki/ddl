@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../../lib/SF-Pro-Display-Bold.otf');
+}
 body {
     display: flex;
     margin: auto;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 108%;
 }
 .nav{
     display: flex;
@@ -34,6 +40,7 @@ a{
     justify-content: space-between;
     z-index: 2;
     font-size: 100%;
+    font-weight: bold;
 }
 .nav-left{
     display: flex;
@@ -74,9 +81,12 @@ a{
     margin-bottom: 5px
 }
 .welcome .title{
-    font-size: 400%;
+    font-size: 430%;
     font-weight: bold;
     line-height: 1.3;
+}
+.welcome .sub-title{
+    font-size: 350%;
 }
 .welcome .main-title{
     /*color: rgb(75, 96, 212);*/
@@ -88,8 +98,9 @@ a{
 .welcome .discription{
     font-size: 180%;
     font-weight: bold;
-    line-height: 1.4;
+    line-height: 1.3;
     margin-top: 24px;
+    margin-left: 3px;
 }
 .intro .links{
     margin-top: 55px;
@@ -109,7 +120,7 @@ a{
 .about:hover{
     background-color: rgb(37, 52, 139);
     padding: 3.4% 10% ;
-    padding-top: 2.5%;
+    padding-top: 2.8%;
 }
 .logo-container{
     display: flex;
@@ -236,16 +247,17 @@ a{
     font-weight: bold;
 }
 .section-server-query .title{
-    margin-top: 10px;
+    margin-top: 20px;
     color: rgb(255, 255, 255);
-    font-size: 300%;
+    font-size: 350%;
     font-weight: bold;
 }
 .section-server-query .discription{
-    margin-top: 30px;
+    margin-top: 25px;
     color: rgb(255, 255, 255);
     font-size: 120%;
     font-weight: bold;
+    line-height: 1.4;
 }
 .section-server-query .link-button{
     padding: 12px 24px;
@@ -308,7 +320,7 @@ a{
     height: 100%;
     border-radius:30px;
     background-color: wheat;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)),url(../img/MinecraftBackground.png);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)),url(../../img/MinecraftBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -320,7 +332,6 @@ a{
     margin-top: 45px;
     margin-left: 45px;
     letter-spacing: .011em;
-    font-family: simhei;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 .top-card .card-discription{
@@ -328,9 +339,9 @@ a{
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-top: 11%;
+    margin-top: 9%;
     letter-spacing: .031em;
-    line-height: 1.4;
+    line-height: 1.2;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 .section-archive .subcard-container{
@@ -353,7 +364,6 @@ a{
     margin-top: 45px;
     margin-left: 45px;
     letter-spacing: .011em;
-    font-family: simhei;
 }
 .aliyun-img{
     height:40%;
@@ -361,11 +371,11 @@ a{
     margin-top: 9%;
 }
 .subcard1 .card-discription{
-    font-size: 300%;
+    font-size: 275%;
     font-weight: bold;
     color: white;
     margin-left: 45px;
-    margin-top: 5%;
+    margin-top: 6%;
     letter-spacing: .021em;
     line-height: 1.25;
 }
@@ -387,7 +397,6 @@ a{
     margin-top: 45px;
     margin-left: 45px;
     letter-spacing: .011em;
-    font-family: simhei;
 }
 .java-logo-img{
     height:40%;
@@ -395,11 +404,11 @@ a{
     margin-top: 8%;
 }
 .subcard2 .card-discription{
-    font-size: 300%;
+    font-size: 275%;
     font-weight: bold;
     color: rgb(0, 0, 0);
     margin-left: 45px;
-    margin-top: 5%;
+    margin-top: 6%;
     letter-spacing: .021em;
     line-height: 1.25;
 }
@@ -409,13 +418,12 @@ a{
 }
 .section-archive .link-button{
     display: inline-block;
-    padding: 20px 27px;
+    padding: 20px 30px;
     background-color: rgb(219, 219, 219);
     border-radius: 30px;
     color: rgb(0, 0, 0);
     font-size: 120%;
     font-weight: bold;
-    font-family: simhei;
 }
 /*.section-archive .subcard2{
     margin-left: 1%;

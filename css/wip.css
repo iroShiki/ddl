@@ -1,5 +1,5 @@
 body {
-    line-height: 1.7;
+    line-height: 1.3;
   }
   @media (max-width:1600px){
     html{
@@ -96,6 +96,7 @@ body {
     float:left;
     position:fixed;
     /*border-right: solid #8e83aa*/
+    height: 100%;
   }
   /*.side-bar > *{
     padding: 1px;
@@ -251,5 +252,14 @@ body {
         60vmax -12vmax,
         72vmax -10vmax;    
     }
+  }
+  .copyright{
+    color: #4e4e4e;
+    position: absolute;
+    bottom:380px;
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
   }
   

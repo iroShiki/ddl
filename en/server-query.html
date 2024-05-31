@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="../img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../lib/s-to-html-color.js" type="text/javascript"></script>
+    <script src="lib/minecraft-server-info-query-en.js"></script>
+	<!--<script src="lib/jquery-3.7.1.min.js"></script>-->
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/server-query.css" />
+	<title>Deep Dark Lab</title>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" href="index.html">
+                    <img src="../img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="index.html" class="tag" id="tag">Home</a>
+                    <a href="../archive.html" class="tag" id="tag">Archive</a>
+                    <a href="project.html" class="tag" id="tag">Projects</a>
+                    <a href="../about.html" class="tag" id="tag">About</a>
+                    <a href="../login.html" class="tag" id="tag">Internal Login</a>
+                    <a href="../project.html" class="tag" id="tag">zh-CN</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="title-container">
+        <div class="info">
+            <img src="../img/deepdarklab_w.png" alt="" class="logo">
+            <div class="title">Minecraft Server<br>Info Query System</div>
+            <div class="discription">Query server status information through the website,<br>including server online number,online list, server version,<br>required modules, game mode and other information.</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="query-title"><img src="img/mc-icons/command-block.png" alt="" class="query-img">Server Info Query<a href="#pop-up" class="about-link">[...]</a></div>
+    <div class="pop-up" id="pop-up">
+        <div class="title">Interfaces used in this project and other open source projects:</div>
+        <div class="content">
+                Minecraft Server Status API; &nbsp;<spam style="font-weight: 500;">Developer: Anders G. Jørgensen; &nbsp;Link: <a style="color: white;" target="_blank" href="https://api.mcsrvstat.us/">Click Here</a></spam></br>
+                Minecraft Server Motd to HTML Style; &nbsp;<spam style="font-weight: 500;">Developer: KazegaFuHua; &nbsp;Link: <a style="color: white;" target="_blank" href="https://github.com/KazegaFuHua/Minecraft-server-Motd-Color-cod-to-HTML-style">Click Here</a></spam>
+                </br>This Project Is Developed By Deep Dark Lab
+        </div>
+        <a href="#" class="pop-up-close">X Close</a>
+    </div>
+    <div class="query-subtitle">
+        <div class="left"><img src="img/mc-icons/magnifying-glass.png" alt="" class="query-img">Query Items</div>
+        <div class="right"><img src="img/mc-icons/book.png" alt="" class="query-img">Query Results</div>
+    </div>
+    <div class="query-container">
+        <div class="query-item">
+            <div class="name query-tag">Server Name</div>
+            <div class="player query-tag">Online Players</div>
+            <div class="online query-tag">Server Status</div>
+            <div class="version query-tag">Required Version</div>
+            <div class="mods query-tag">Required Mod</div>
+            <div class="player-list query-tag">Player List</div>
+        </div>
+        <div class="query-result">
+            <div id="r-name" class="r-query-tag" style="text-shadow: 1px -1px 0 #00000034, 1px -1px 0 #00000034, -1px 1px 0 #00000034, 1px 1px 0 #00000034;">Just a moment</div>
+            <div id="r-player" class="r-query-tag">Just a moment</div>
+            <div id="r-online" class="r-query-tag">Just a moment</div>
+            <div id="r-version" class="r-query-tag">Just a moment</div>
+            <div id="r-mods" class="r-query-tag">Just a moment</div>
+            <div id="r-player-list" class="r-query-tag">Just a moment</div>
+        </div>
+    </div>
+    <div class="query-button-container">
+        <button class="query-button" onclick="serverquery(),refresh()">
+            <spam id="button-text">Refresh</spam>
+            <img id="button-icon" src="../img/ripples.svg" alt="">
+        </button>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <spam class="copyright">Deep Dark Lab Powered 1982-2049</spam>
+            <spam class="footer-tags">
+                <a href="https://ys.mihoyo.com/main/">Links</a>
+                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
+                <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
+            </spam>
+        </div>
+    </div>
+</body>
+
+<script>
+serverquery()
+</script>
+<script>
+	var isVisible = false;
+	
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[id=tag]").css("color","white");
+            $('#logo').attr("src","../img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[id=tag]").css("color","black");
+            $('#logo').attr("src","../img/deepdarklab_b.png");
+		}
+	});
+</script>
+<script>
+
+</script>
