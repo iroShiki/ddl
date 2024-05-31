@@ -112,18 +112,18 @@ a{
     background-size: cover;
 }
 .title-container .info{
-    margin-left: 50px;
+    margin-left: 10%;
     height:120%;
 }
 .title-container .logo{
-    height:3%;
+    height:3.5%;
     margin-top: 40px;
     margin-left: 4px;
 }
 .title-container .title{
     margin-top: 10px;
     color: white;
-    font-size: 200%;
+    font-size: 180%;
     font-weight: bold;
 }
 .title-container .discription{
