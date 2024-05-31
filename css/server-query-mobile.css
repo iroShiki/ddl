@@ -86,13 +86,14 @@ a{
     position: absolute;
     background-color: rgb(255, 255, 255);
     min-width: 160px;
-    padding: 10px 10px;
+    padding: 10px 8px;
     z-index: 1;
-    margin-top:21px;
+    margin-top:19px;
     text-align: center;
     right: -100%;
     backdrop-filter: blur(50px);
     line-height: 3;
+    font-size: 80%;
   }
 .menu-tag{
     display: block;
