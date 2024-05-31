@@ -32,6 +32,17 @@
                     <a href="en/project.html" class="tag" id="tag">EN</a>
                 </div>             
             </div>
+            <div class="dropdown">
+                <span id="tag">菜单</span>
+                <div class="dropdown-content" id="menu">
+                    <a href="index.html" class="menu-tag" id="tag">首页</a>
+                    <a href="archive.html" class="menu-tag" id="tag">存档</a>
+                    <a href="project.html" class="menu-tag" id="tag">项目</a>
+                    <a href="about.html" class="menu-tag" id="tag">关于</a>
+                    <a href="login.html" class="menu-tag" id="tag">会员登入</a>
+                    <a href="en/project.html" class="menu-tag" id="tag">EN</a>
+                </div>
+              </div>
         </div>
     </div>
     <div class="title-container">
@@ -102,12 +113,14 @@ serverquery()
 		var shouldBeVisible = $(window).scrollTop()>20;
 		if (shouldBeVisible && !isVisible) {
 			isVisible = true;
-			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+			$('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
+            $('[id=menu]').css("background-color","rgb(51, 51, 51)");
             $("[id=tag]").css("color","white");
             $('#logo').attr("src","img/deepdarklab_w.png");
 		} else if (isVisible && !shouldBeVisible) {
 			isVisible = false;
-			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
+            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
             $("[id=tag]").css("color","black");
             $('#logo').attr("src","img/deepdarklab_b.png");
 		}
