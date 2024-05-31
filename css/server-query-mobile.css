@@ -38,14 +38,14 @@ a{
 }
 .nav-content{
     max-width: 1200px;
+    position: absolute;
+    top:0px;
     width: 90%;
     height: 100%;
-    position: fixed;
     align-items: center;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    z-index: 2;
     font-size: 100%;
 }
 .nav-left{
@@ -54,7 +54,7 @@ a{
     width: 10%;
 }
 .nav .logo{
-    width: 150%;
+    width: 300%;
 }
 .tag{
     font-size: 14px;
@@ -71,6 +71,34 @@ a{
     display: flex;
     align-items: center;
 }
+.tag-list{
+    display:none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    padding: 10px 10px;
+    z-index: 1;
+    margin-top:21px;
+    text-align: center;
+    right: -50%;
+    backdrop-filter: blur(50px);
+    line-height: 3;
+  }
+.menu-tag{
+    display: block;
+  }
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
 .title-container{
     width: 90%;
     max-width: 1200px;
@@ -283,15 +311,17 @@ a{
 }
 .copyright{
     display: block;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 .footer-tags{
     display: block;
+    margin-left: 50px;
 }
 .footer-tags a{
+    margin-left: 0;
+    margin-right: 30px;
     color: white;
     display: inline-block;
-    margin-left: 25px;
     padding-top: 15px;
 }
 }
