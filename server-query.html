@@ -33,7 +33,7 @@
                 </div>             
             </div>
             <div class="dropdown">
-                <span id="tag">菜单</span>
+                <span id="tag">☰</span>
                 <div class="dropdown-content" id="menu">
                     <a href="index.html" class="menu-tag" id="tag">首页</a>
                     <a href="archive.html" class="menu-tag" id="tag">存档</a>
@@ -114,7 +114,7 @@ serverquery()
 		if (shouldBeVisible && !isVisible) {
 			isVisible = true;
 			$('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
-            $('[id=menu]').css("background-color","rgb(51, 51, 51)");
+            $('[id=menu]').css("background-color","rgba(0, 0, 0, 0.7)");
             $("[id=tag]").css("color","white");
             $('#logo').attr("src","img/deepdarklab_w.png");
 		} else if (isVisible && !shouldBeVisible) {
