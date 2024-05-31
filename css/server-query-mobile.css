@@ -84,20 +84,31 @@ a{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
     min-width: 160px;
-    padding: 10px 8px;
+    padding: 30px 10px;
     z-index: 1;
     margin-top:19px;
     text-align: center;
     right: -100%;
     backdrop-filter: blur(50px);
-    line-height: 3;
-    font-size: 80%;
+    line-height: 5;
+    font-size: 90%;
+    font-weight: bold;
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+    height: 100vh;
+    box-shadow: 0 10px 5px 1px rgba(0, 0, 0, 0.274);
   }
 .menu-tag{
     display: block;
   }
+.menu-logo{
+    width:70px;
+    height: auto;
+    margin-top: 30%;
+}
 .menu-close-button{
     display: none;
 }
