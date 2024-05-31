@@ -94,4 +94,8 @@
 	{
 		document.getElementById("tag-list").style.display = "none";
 	}
+	const mediaQuery = window.matchMedia('(max-width: 850px)')
+    if (mediaQuery.matches){
+        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
+    }
 </script>
