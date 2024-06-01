@@ -153,7 +153,7 @@ body {
   }
   .main {
     width: 85%;
-    background-image: url('../img/yuki1.jpg');
+    background-image: url('../../img/yuki1.jpg');
     background-color: #ffffff;
     border-top-left-radius: 30px;
     background-repeat: no-repeat;
@@ -190,7 +190,7 @@ body {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     /*background: linear-gradient(to bottom,rgb(39, 4, 46), rgb(6, 2, 59));*/
-    background-color: #1a1a1a;
+    background-color: #ffffff;
   }
   .title{
     margin-left: 12%;
@@ -198,7 +198,7 @@ body {
     font-size:160%;
     font-family: Tahoma;
     font-weight: 700;
-    color: #4d97ec;
+    color: #b642b6;
   }
   .article{
     margin-left: 12%;
@@ -207,7 +207,7 @@ body {
     font-size: 120%;
     font-family: Microsoft YaHei;
     font-weight: 600;
-    color: #ffffff;
+    color: #000000;
   }
   .image{
     width:100%;
@@ -223,7 +223,7 @@ body {
   }
   .button{
     padding: 1.5% 8%;
-    background-color: #156ccf;
+    background-color: #a02fa0;
     display: inline-block;
     margin-top: 4%;
     margin-left: 12%;
@@ -241,7 +241,7 @@ body {
   .button:hover, .button:active{
     color: rgb(255, 255, 255);
  
-      background-color: #438adb;
+      background-color: #b84db8;
     
   }
   .download-source{
@@ -249,7 +249,7 @@ body {
     margin-left: 2%;
     font-family:microsoft yahei;
     font-weight: bold;
-    color: rgb(189, 189, 189);
+    color: rgb(126, 126, 126);
   }
   li {
     list-style-type: none;

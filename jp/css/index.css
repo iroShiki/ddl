@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    font-family: "-apple-system", BlinkMacSystemFont, "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ", "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
 }
 .nav{
     display: flex;
@@ -164,10 +165,11 @@ a{
     font-weight: bold;
     color: rgb(0, 0, 0);
     margin-left: 8%;
+    width:70%;
 }
 .archive-link{
     font-size: 50%; 
-    margin-left: 2%; 
+    margin-left: 0; 
     color: rgb(108, 110, 218);
     -webkit-transition: color 100ms linear;
     -ms-transition: color 100ms linear;
@@ -308,7 +310,7 @@ a{
     height: 100%;
     border-radius:30px;
     background-color: wheat;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)),url(../img/MinecraftBackground.png);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)),url(../../img/MinecraftBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -324,7 +326,7 @@ a{
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 .top-card .card-discription{
-    font-size: 350%;
+    font-size: 320%;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -423,7 +425,7 @@ a{
     width:39.5%;
     height: 99%;
     border-radius:30px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.479)), url('../img/genshin2.png');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.479)), url('../../img/genshin2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;

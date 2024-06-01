@@ -145,7 +145,7 @@ body {
   }
   .main {
     width: 85%;
-    background-image: url('../img/yuki1.jpg');
+    background-image: url('../../img/yuki1.jpg');
     background-color: #ffffff;
     border-top-left-radius: 30px;
     background-repeat: no-repeat;
