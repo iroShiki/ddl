@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
+	<script src="lib/jquery-1.7.2.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/region.css" />
+	<title>Deep Dark Lab</title>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" href="index.html">
+                <img src="img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="archive.html" class="tag" id="tag">Archive</a>
+                    <a href="project.html" class="tag" id="tag">Project</a>
+                    <a href="about.html" class="tag" id="tag">About</a>
+                    <a href="login.html" class="tag" id="tag">Login</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="content">
+            <div class="title">Select a country or region</div>
+            <div class="continent">
+                <div class="continent-title">Global</div>
+                <div class="divider"></div>
+                <div class="country-list">
+                    <a href="en/index.html" class="country">Global/English</a>
+                </div>
+            </div>
+            <div class="continent">
+                <div class="continent-title">America Region</div>
+                <div class="divider"></div>
+                <div class="country-list">
+                    <a href="en/index.html" class="country">Canada/English</a>
+                    <a href="en/index.html" class="country">United States/English</a>
+                </div>
+            </div>
+            <div class="continent">
+                <div class="continent-title">Africa & Middle East Region</div>
+                <div class="divider"></div>
+                <div class="country-list">
+                    <a href="en/index.html" class="country">East Africa/English</a>
+                    <a href="en/index.html" class="country">Egypt/English</a>
+                    <a href="en/index.html" class="country">Middle East/English</a>
+                    <a href="en/index.html" class="country">Saudi Arabia/English</a>
+                    <a href="en/index.html" class="country">South Africa/English</a>
+                    <a href="en/index.html" class="country">West Africa/English</a>
+                </div>
+            </div>
+            <div class="continent">
+                <div class="continent-title">Asia-Pacific Region</div>
+                <div class="divider"></div>
+                <div class="country-list">
+                    <a href="en/index.html" class="country" >Australia/English</a>
+                    <a href="en/index.html" class="country" >Bangladesh/English</a>
+                    <a href="en/index.html" class="country" >Brunei/English</a>
+                    <a href="zh-cn/index.html" class="country">Chinese Mainland/简体中文</a>
+                    <a href="zh-hant/index.html" class="country">Hong Kong/繁體中文</a>
+                    <a href="en/index.html" class="country" >Hong Kong/English</a>
+                    <a href="zh-hant/index.html" class="country">Taiwan/繁體中文</a>
+                    <a href="en/index.html" class="country" >India/English</a>
+                    <a href="jp/index.html" class="country" >Japan/日本語</a>
+                    <a href="en/index.html" class="country" >Malaysia/English</a>
+                    <a href="en/index.html" class="country" >Nepal/English</a>
+                    <a href="en/index.html" class="country" >New Zealand/English</a>
+                    <a href="en/index.html" class="country" >Philippines/English</a>
+                    <a href="en/index.html" class="country" >Pakistan/English</a>
+                    <a href="en/index.html" class="country" >Singapore/English</a>
+                    <a href="en/index.html" class="country" >Sri Lanka/English</a>
+                </div>
+            </div>
+            <div class="continent">
+                <div class="continent-title">Europe Region</div>
+                <div class="divider"></div>
+                <div class="country-list">
+                    <a href="en/index.html" class="country">Baltics/English</a>
+                    <a href="en/index.html" class="country">United Kingdom/English</a>
+                    <a href="en/index.html" class="country">Switzerland/English</a>
+                    <a href="en/index.html" class="country">Ireland/English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <spam class="copyright">Deep Dark Lab Powered 1982-2049</spam>
+            <spam class="footer-tags">
+                <a href="https://ys.mihoyo.com/main/">Links</a>
+                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
+                <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
+            </spam>
+        </div>
+    </div>
+</body>
+<footer>
+    
+</footer>
+<script>
+	var isVisible = false;
+	var isVisible1 = false;
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[id=tag]").css("color","white");
+            $('#logo').attr("src","img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[id=tag]").css("color","black");
+            $('#logo').attr("src","img/deepdarklab_b.png");
+		}
+	});
+	const mediaQuery = window.matchMedia('(max-width: 850px)')
+    if (mediaQuery.matches){
+        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
+    }
+</script>
