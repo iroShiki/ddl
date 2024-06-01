@@ -9,11 +9,11 @@ body {
 }
 @font-face {
     font-family: 'Minecraft R';
-    src: url('../../lib/1_Minecraft-Regular.otf');
+    src: url('../../fonts/1_Minecraft-Regular.otf');
 }
 @font-face {
     font-family: 'minecraft';
-    src: url('../../lib/5_Minecraft AE.ttf');
+    src: url('../../fonts/5_Minecraft AE.ttf');
 }
 button{
     border: none;
@@ -92,7 +92,7 @@ a{
     text-align: center;
     right: -100%;
     backdrop-filter: blur(50px);
-    line-height: 5;
+    line-height: 4;
     font-size: 90%;
     font-weight: bold;
     -webkit-transition: all 100ms linear;
@@ -342,5 +342,8 @@ a{
     color: white;
     display: inline-block;
     padding-top: 15px;
+}
+#change-region{
+    display: none;
 }
 }
