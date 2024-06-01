@@ -36,6 +36,7 @@ a{
     justify-content: space-between;
     z-index: 2;
     font-size: 100%;
+    font-weight: 500;
 }
 .nav-left{
     display: flex;
@@ -47,7 +48,6 @@ a{
 }
 .tag{
     font-size: 14px;
-    
     padding: 0px 20px;
     -webkit-transition: color 100ms linear;
     -ms-transition: color 100ms linear;
@@ -68,6 +68,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: white;
+    background-image: url('../img/deepdarklab_background.png');
 }
 .content{
     max-width: 1200px;
@@ -75,11 +76,12 @@ body{
     margin-top:130px;
     margin-bottom: 50px;
     display: block;
+    
 }
 .title{
     text-align: center;
     font-size: 250%;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 80px;
 }
 .continent{
@@ -88,6 +90,7 @@ body{
 }
 .continent-title{
     font-size: 120%;
+    font-weight: 500;
 }
 .divider{
     margin-top: 20px;
@@ -131,6 +134,7 @@ body{
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
+    font-weight: 500;
 }
 .copyright{
     display: inline-block;
