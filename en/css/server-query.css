@@ -169,7 +169,7 @@ a{
     background-size: 41px 41px;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: minecraft;
+    font-family: minecraft R;
 }
 .r-query-tag{
     background-color: rgb(255, 255, 255);
@@ -250,7 +250,7 @@ a{
     box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.452);
 }
 .pop-up .title{
-    font-size: 110%;
+    font-size: 120%;
     margin-left: 80px;
     margin-top: 68px;
     font-weight: bold;
