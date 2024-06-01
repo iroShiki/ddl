@@ -99,7 +99,7 @@ a{
     -ms-transition: all 100ms linear;
     transition: all 100ms linear;
     height: 100vh;
-    box-shadow: 0 10px 5px 1px rgba(0, 0, 0, 0.274);
+    box-shadow: -100px 100px 100px 1px rgba(0, 0, 0, 0.247);
   }
 .menu-tag{
     display: block;
