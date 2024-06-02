@@ -4,6 +4,7 @@
 	<link rel="shortcut icon" href="../img/nerv.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
     <script src="../lib/s-to-html-color.js" type="text/javascript"></script>
@@ -44,11 +45,11 @@
     <div class="pop-up" id="pop-up">
         <div class="title">Interfaces used in this project and other open source projects:</div>
         <div class="content">
-                Minecraft Server Status API; &nbsp;<spam style="font-weight: 500;">Developer: Anders G. Jørgensen; &nbsp;Link: <a style="color: white;" target="_blank" href="https://api.mcsrvstat.us/">Click Here</a></spam></br>
-                Minecraft Server Motd to HTML Style; &nbsp;<spam style="font-weight: 500;">Developer: KazegaFuHua; &nbsp;Link: <a style="color: white;" target="_blank" href="https://github.com/KazegaFuHua/Minecraft-server-Motd-Color-cod-to-HTML-style">Click Here</a></spam>
+                Minecraft Server Status API; &nbsp;<span style="font-weight: 500;">Developer: Anders G. Jørgensen; &nbsp;Link: <a style="color: white;" target="_blank" href="https://api.mcsrvstat.us/">Click Here</a></span></br>
+                Minecraft Server Motd to HTML Style; &nbsp;<span style="font-weight: 500;">Developer: KazegaFuHua; &nbsp;Link: <a style="color: white;" target="_blank" href="https://github.com/KazegaFuHua/Minecraft-server-Motd-Color-cod-to-HTML-style">Click Here</a></span>
                 </br>This Project Is Developed By Deep Dark Lab
         </div>
-        <a href="#" class="pop-up-close">X Close</a>
+        <a href="#" class="pop-up-close">Close</a>
     </div>
     <div class="query-subtitle">
         <div class="left"><img src="img/mc-icons/magnifying-glass.png" alt="" class="query-img">Query Items</div>
@@ -74,20 +75,22 @@
     </div>
     <div class="query-button-container">
         <button class="query-button" onclick="serverquery(),refresh()">
-            <spam id="button-text">Refresh</spam>
+            <span id="button-text">Refresh</span>
             <img id="button-icon" src="../img/ripples.svg" alt="">
         </button>
     </div>
     <div class="footer">
         <div class="footer-content">
-            <spam class="copyright">Deep Dark Lab Powered 1982-2049</spam>
-            <spam class="footer-tags">
+            <span class="copyright">
+                Deep Dark Lab Powered 1982-2049
                 <a href="https://ys.mihoyo.com/main/">Links</a>
                 <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
                 <a href="https://ys.mihoyo.com/main/company/privacy" style="margin-right: 25px;">Privacy Policy</a>
-                <img src="../img/language1.png" style="height: 20px; position:absolute;">
-                <a href="../region.html" style="margin-left: 22px;">English</a>
-            </spam>
+            </span>
+            <span class="footer-tags">
+                <span id="change-region"><img src="../img/language1.png" style="height: 20px; position:absolute;">
+                <a href="../region.html" style="margin-left: 22px;">English Language</a></span>
+            </span>
         </div>
     </div>
 </body>
