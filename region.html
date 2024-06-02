@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
 	<script src="lib/jquery-1.7.2.js"></script>
+    <script src="lib/change-display-lang.js"></script>
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="css/region.css" />
 	<title>Deep Dark Lab</title>
@@ -21,17 +22,18 @@
             </div>
             <div class="nav-right">
                 <div class="tag-list">
-                    <a href="archive.html" class="tag" id="tag">Archive</a>
-                    <a href="project.html" class="tag" id="tag">Project</a>
-                    <a href="about.html" class="tag" id="tag">About</a>
-                    <a href="login.html" class="tag" id="tag">Internal Login</a>
+                    <a href="index.html" class="tag" id="tag-home">Home</a>
+                    <a href="archive.html" class="tag" id="tag-archive">Archive</a>
+                    <a href="project.html" class="tag" id="tag-project">Project</a>
+                    <a href="about.html" class="tag" id="tag-about">About</a>
+                    <a href="login.html" class="tag" id="tag-login">Internal Login</a>
                 </div>             
             </div>
         </div>
     </div>
     <div class="main">
         <div class="content">
-            <div class="title">Select a country or region</div>
+            <div class="title" id="title">Select a country or region</div>
             <div class="continent">
                 <div class="continent-title">Global</div>
                 <div class="divider"></div>
@@ -115,12 +117,12 @@
 		if (shouldBeVisible && !isVisible) {
 			isVisible = true;
 			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
-            $("[id=tag]").css("color","white");
+            $("[class=tag]").css("color","white");
             $('#logo').attr("src","img/deepdarklab_w.png");
 		} else if (isVisible && !shouldBeVisible) {
 			isVisible = false;
 			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
-            $("[id=tag]").css("color","black");
+            $("[class=tag]").css("color","black");
             $('#logo').attr("src","img/deepdarklab_b.png");
 		}
 	});
@@ -128,4 +130,7 @@
     if (mediaQuery.matches){
         alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
     }
+</script>
+<script>
+    change_display_lang();
 </script>
