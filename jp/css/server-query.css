@@ -166,7 +166,7 @@ a{
     background-size: 41px 41px;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: minecraft;
+    font-family: minecraft R;
 }
 .r-query-tag{
     background-color: rgb(255, 255, 255);
@@ -284,9 +284,25 @@ a{
 }
 .copyright{
     display: inline-block;
+    color: rgb(189, 189, 189);
 }
 .footer-tags a{
     color: white;
     display: inline-block;
     margin-left: 30px;
+}
+.copyright a{
+    color: white;
+    margin-left: 40px;
+}
+#change-region{
+    padding: 15px 15px;
+    font-size: 95%;
+    border: 1px solid rgba(161, 161, 161, 0.425);
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+}
+#change-region:hover{
+    border: 1px solid rgb(231, 231, 231);
 }
