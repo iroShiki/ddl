@@ -112,22 +112,6 @@
 </footer>
 </html>
 <script>
-	var isVisible = false;
-	
-	$(window).scroll(function(){
-		var shouldBeVisible = $(window).scrollTop()>100;
-		if (shouldBeVisible && !isVisible) {
-			isVisible = true;
-			$('#side-bar-content').fadeIn();
-			$('#pre-logo').hide();
-		} else if (isVisible && !shouldBeVisible) {
-			isVisible = false;
-			$('#side-bar-content').hide();
-			$('#pre-logo').fadeIn();
-		}
-	});
-</script>
-<script>
 	function sidebarvisible()
 	{
 		document.getElementById("tag-list").style.display = "none";
