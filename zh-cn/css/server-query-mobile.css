@@ -149,11 +149,14 @@ a{
     }
 }
 .divider{
-    margin-top: 20px;
-    width:80%;
-    max-width: 1300px;
+    margin-top: 30px;
+    width:22%;
+    max-width: 1200px;
     background-color: rgba(0, 0, 0, 0.089);
     height:1px;
+    position: relative;
+    bottom: 5px;
+    display: inline-block;
 }
 .query-title{
     width:90%;
@@ -162,6 +165,9 @@ a{
     font-weight: bold;
     font-size: 110%;
     margin-top: 20px;
+}
+.query-main-title{
+    margin-right: 8px;
 }
 #r-name{font-size: 60%;}
 .query-subtitle{
@@ -177,6 +183,7 @@ a{
 }
 .query-img{
     height:20px;
+    margin-left: 8px;
 }
 .query-container{
     width: 90%;
