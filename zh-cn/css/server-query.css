@@ -106,9 +106,8 @@ a{
     margin-top: 50px;
 }
 .divider{
-    margin-top: 30px;
-    width:40%;
-    max-width: 1200px;
+    margin-top: 35px;
+    width:35.5%;
     background-color: rgba(0, 0, 0, 0.089);
     height:1px;
     position: relative;
@@ -117,10 +116,10 @@ a{
 }
 .query-title{
     width:90%;
-    max-width: 1200px;
+    max-width: 1400px;
     text-align: center;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 125%;
     margin-top: 30px;
 }
 .query-subtitle{
