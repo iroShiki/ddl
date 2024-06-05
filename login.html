@@ -1,119 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-	<link rel="shortcut icon" href="img/nerv.png">
+	<link rel="shortcut icon" href="../img/nerv.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
-	<script src="lib/jquery-1.7.2.js"></script>
-    <script src="lib/change-display-lang.js"></script>
+	<script src="../lib/jquery-3.7.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" href="css/login.css" />
+	<link rel="stylesheet" href="css/index-legacy.css" />
+    <script language="javascript" type="text/javascript"> 
+        window.location.href='../login.html?lang=zh-cn';
+    </script>
 	<title>Deep Dark Lab</title>
-</head>
-<body>
-    <div class="nav" id="nav">
-        <div class="nav-content">
-            <a class="nav-left" href="index.html" id="nav-left">
-                <img src="img/deepdarklab_b.png" alt="" class="logo" id="logo">
-            </a>
-            <div class="nav-center">              
-            </div>
-            <div class="nav-right">
-                <div class="tag-list">
-                    <a href="index.html" class="tag" id="tag-home">Home</a>
-                    <a href="archive.html" class="tag" id="tag-archive">Archive</a>
-                    <a href="project.html" class="tag" id="tag-project">Project</a>
-                    <a href="about.html" class="tag" id="tag-about">About</a>
-                    <a href="login.html" class="tag" id="tag-login">Internal Login</a>
-                </div>             
-            </div>
-        </div>
-    </div>
-    <div class="main">
-        <span id="title" style="display: none;"></span>
-        <div class="login-page-container">
-            <div class="login-page-main">
-                <div class="login-page-left">
-                    <div class="login-page-logo-container">
-                        <img src="img/nerv2.png" alt="" class="login-logo">
-                    </div>
-                    <div class="login-page-left-title">NERV Internal Login System</div>
-                    <div class="login-page-discription"><span class="main-discription">The login service of Deep Dark Lab website is provided by NERV agency.</span>
-                        For more information about how NERV agency handles, stores and uses your personal information, please review the <a href="https://www.bilibili.com/video/BV1GJ411x7h7"><u>Nerv Privacy Policy for Personal Information</u></a>.</div>
-                </div>
-                <div class="login-page-divider-container">
-                    <div class="login-page-divider"></div>
-                </div>
-                <div class="login-page-right">
-                    <div class="login-page-right-title">Account Login</div>
-                    <div class="login-section">
-                        <div class="login-section-account">
-                            <span for="" class="account-title login-section-title">Account</span>
-                            <input type="text" class="account-input input-box">
-                            <span class="account-alert login-alert">Please enter your Nerv ID</span>
-                        </div>
-                        <div class="login-section-password">
-                            <span for="" class="password-title login-section-title">Password</span>
-                            <input type="text" class="password-input input-box">
-                            <span class="password-alert login-alert"></span>
-                            <div class="remember-me">
-                                <input type="checkbox" class="remember-me-checkbox"><span class="remember-me-discription">Remember me for 3 days.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="submit-button" type="submit" onclick="login('sign_in')">Sign In</button>
-                    <div id="login-information"></div>
-                    <a href="javascript:void(0)" class="register-discription" onclick="login('forget')">Forgot your password?</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="footer">
-        <div class="footer-content">
-            <span class="copyright">Deep Dark Lab Powered 1982-2049</span>
-            <span class="footer-tags">
-                <a href="https://ys.mihoyo.com/main/">Links</a>
-                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
-                <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
-            </span>
-        </div>
-    </div>
-</body>
-<script>
-	var isVisible = false;
-	var isVisible1 = false;
-	$(window).scroll(function(){
-		var shouldBeVisible = $(window).scrollTop()>20;
-		if (shouldBeVisible && !isVisible) {
-			isVisible = true;
-			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
-            $("[class=tag]").css("color","white");
-            $('#logo').attr("src","img/deepdarklab_w.png");
-		} else if (isVisible && !shouldBeVisible) {
-			isVisible = false;
-			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
-            $("[class=tag]").css("color","black");
-            $('#logo').attr("src","img/deepdarklab_b.png");
+	<style>
+		body{
+			background-color: #1b1b1b;
 		}
-	});
-	const mediaQuery = window.matchMedia('(max-width: 850px)')
-    if (mediaQuery.matches){
-        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
-    }
-</script>
+	</style>
+</head>
+
+<body>
+	<div class="top-bar">
+		<div class="banner">
+			<a href="#">
+				<img class="logo"src="../img/deepdarklab_white.png">
+			</a>
+			<img src="../img/nerv2.png"alt="nerv" style="float:right;width:5%;margin-right:10%;margin-top:25px">
+			<div class="intro">Deep&nbsp•&nbspDark&nbsp•&nbspFantasies</div>
+		</div> 
+
+		<div class="nav">
+			<a class="tag" href="index.html">主页</a>
+			<a class="tag" href="archive.html">存档</a>
+			<a class="tag" href="project.html">项目</a>
+			<a class="tag" href="about.html">关于</a>
+			<a class="login" id="login" href="login.html" onclick="sidebarvisible()">会员登录</a>
+			<script>
+				function myFunction()
+				{
+					document.getElementById("login").innerHTML="功能开发中";
+				}
+				</script>
+		</div>
+	</div>
+	<div class="side-bar">
+		<div id="pre-logo">
+			<img class="pre-logo" src="../img/Aperture-Science-Symbol.png">
+		</div>
+		<div class="side-bar-content" id="side-bar-content">
+			<div>
+				<a href="index.html">
+					<img class="logo"src="../img/deepdarklab_white.png">
+				</a>
+			</div>
+			<div class="tag-list" id="tag-list">
+				<a href="archive.html">存档</a>
+				<a href="project.html">项目</a>
+				<a href="about.html">关于</a>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="article-list">
+			<div class="item">
+				<a class="title" href="#">欢迎访问 Deep Dark Lab 的官方网站</a>
+				<div class="status">发布于2024-05-11 | 阅读114514 | 标签：#html</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim, nisi laborum vel modi esse sint facilis voluptates corporis! Quo facilis enim at temporibus quod similique a saepe veritatis blanditiis.
+				</div>
+			</div>
+			<div class="item">
+				<a class="title" href="#">欢迎访问 Deep Dark Lab 的官方网站</a>
+				<div class="status">发布于2024-05-11 | 阅读114514 | 标签：#html</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim, nisi laborum vel modi esse sint facilis voluptates corporis! Quo facilis enim at temporibus quod similique a saepe veritatis blanditiis.
+				</div>
+			</div>
+			<div class="item">
+				<a class="title" href="#">欢迎访问 Deep Dark Lab 的官方网站</a>
+				<div class="status">发布于2024-05-11 | 阅读114514 | 标签：#html</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim, nisi laborum vel modi esse sint facilis voluptates corporis! Quo facilis enim at temporibus quod similique a saepe veritatis blanditiis.
+				</div>
+			</div>
+			<div class="item">
+				<a class="title" href="#">欢迎访问 Deep Dark Lab 的官方网站</a>
+				<div class="status">发布于2024-05-11 | 阅读114514 | 标签：#html</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim, nisi laborum vel modi esse sint facilis voluptates corporis! Quo facilis enim at temporibus quod similique a saepe veritatis blanditiis.
+				</div>
+			</div>
+			<div class="item">
+				<a class="title" href="#">欢迎访问 Deep Dark Lab 的官方网站</a>
+				<div class="status">发布于2024-05-11 | 阅读114514 | 标签：#html</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim, nisi laborum vel modi esse sint facilis voluptates corporis! Quo facilis enim at temporibus quod similique a saepe veritatis blanditiis.
+				</div>
+			</div>
+			<div class="item">
+				<a class="title" href="#">欢迎访问 Deep Dark Lab 的官方网站</a>
+				<div class="status">发布于2024-05-11 | 阅读114514 | 标签：#html</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim, nisi laborum vel modi esse sint facilis voluptates corporis! Quo facilis enim at temporibus quod similique a saepe veritatis blanditiis.
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+</footer>
+</html>
 <script>
-    function login(i){
-        if(i=='sign_in'){document.getElementById('login-information').innerHTML='*Our system is currently under maintenance.';}
-        else {document.getElementById('login-information').innerHTML='*To recover your account, please contact the NERV agency in your local area with valid documents.';}
-        $("[class=register-discription]").css("margin-top","8px")
-    }
-</script>
-<script>
-    change_display_lang(login);
+	function sidebarvisible()
+	{
+		document.getElementById("tag-list").style.display = "none";
+	}
 </script>
