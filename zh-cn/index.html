@@ -21,10 +21,16 @@
             </div>
             <div class="nav-right">
                 <div class="tag-list">
-                    <a href="archive.html" class="tag" id="tag">存档</a>
-                    <a href="project.html" class="tag" id="tag">项目</a>
+                    <a href="index.html" class="tag" id="tag">首页</a>
+                    <div class="tag tag-project" id="tag">
+                        <a href="project.html" id="tag">项目</a>
+                        <div class="dropdown-project" id="menu">
+                            <a href="server-query.html" class="dropdown-project-tag first-tag" id="tag">服务器信息查询系统</a>
+                            <a href="archive.html" class="dropdown-project-tag last-tag" id="tag">Minecarft存档库</a>
+                        </div>
+                    </div>
                     <a href="about.html" class="tag" id="tag">关于</a>
-                    <a href="login.html" class="tag" id="tag">内部登录</a>
+                    <a href="login.html" class="tag" id="tag" style="padding-right: 5px;">内部登录</a>
                 </div>             
             </div>
         </div>
@@ -120,31 +126,32 @@
 </body>
 <script>
 	var isVisible = false;
-	var isVisible1 = false;
+    const mediaQuery = window.matchMedia('(min-width: 850px)')
 	$(window).scroll(function(){
 		var shouldBeVisible = $(window).scrollTop()>20;
 		if (shouldBeVisible && !isVisible) {
 			isVisible = true;
-			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            if (mediaQuery.matches) {
+                $('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
+            }
+            else{
+                $('[id=nav]').css("background-color","rgb(36, 36, 36)");
+            }
+            $('[id=menu]').css("background-color","rgba(45, 45, 45)");
             $("[id=tag]").css("color","white");
             $('#logo').attr("src","../img/deepdarklab_w.png");
 		} else if (isVisible && !shouldBeVisible) {
 			isVisible = false;
-			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            if (mediaQuery.matches) {
+			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
+            }
+            else{$('[id=nav]').css("background-color","rgb(255, 255, 255)");}
+            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
             $("[id=tag]").css("color","black");
             $('#logo').attr("src","../img/deepdarklab_b.png");
 		}
-        var shouldBeVisible1 = $(window).scrollTop()>980;
-		if (shouldBeVisible1 && !isVisible1) {
-			isVisible1 = true;
-            $('#command_block').attr("src","../img/Impulse_Command_Block.webp");
-		} else if (isVisible1 && !shouldBeVisible1) {
-			isVisible1 = false;
-            $('#command_block').attr("src","../img/Chain_Command_Block.webp");
-		}
 	});
-	const mediaQuery = window.matchMedia('(max-width: 850px)')
-    if (mediaQuery.matches){
+    if (!mediaQuery.matches){
         alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
     }
 </script>

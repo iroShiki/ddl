@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/server-query-mobile.css" />
 	<title>Deep Dark Lab</title>
 </head>
-<body>
+<body id="body">
     <div class="nav" id="nav">
         <div class="nav-content">
             <a class="nav-left" href="index.html">
@@ -25,12 +25,18 @@
             <div class="nav-right">
                 <div class="tag-list">
                     <a href="index.html" class="tag" id="tag">首页</a>
-                    <a href="archive.html" class="tag" id="tag">存档</a>
-                    <a href="project.html" class="tag" id="tag">项目</a>
+                    <div class="tag tag-project">
+                        <a href="project.html" id="tag">项目</a>
+                        <div class="dropdown-project" id="menu">
+                            <a href="server-query.html" class="dropdown-project-tag first-tag" id="tag">服务器信息查询系统</a>
+                            <a href="archive.html" class="dropdown-project-tag last-tag" id="tag">Minecarft存档库</a>
+                        </div>
+                    </div>
                     <a href="about.html" class="tag" id="tag">关于</a>
-                    <a href="login.html" class="tag" id="tag">内部登录</a>
+                    <a href="login.html" class="tag" id="tag" style="padding-right: 5px;">内部登录</a>
                 </div>             
             </div>
+            
             <div class="dropdown">
                 <span id="tag" class="menu-open-button" onclick="menu_open()">☰</span>
                 <span id="tag" class="menu-close-button" onclick="menu_close()">✕</span>
@@ -43,7 +49,7 @@
                     <a href="../region.html" class="menu-tag" id="tag">Language</a>
                     <img class="menu-logo" src="../img/nerv2.png" alt="">
                 </div>
-              </div>
+            </div>
         </div>
     </div>
     <div class="title-container">
@@ -141,7 +147,7 @@ serverquery()
 			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
             }
             else{$('[id=nav]').css("background-color","rgb(255, 255, 255)");}
-            $('[id=menu]').css("background-color","rgba(245, 245, 245)");
+            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
             $("[id=tag]").css("color","black");
             $('#logo').attr("src","../img/deepdarklab_b.png");
 		}
@@ -159,3 +165,8 @@ serverquery()
         $('.dropdown-content').css('display','none');
     }
 </script>
+<!--<script>
+    function show_menu_project(){
+        $('.dropdown-project').css('display','block');
+    }
+</script>-->
