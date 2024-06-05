@@ -1,12 +1,85 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<link rel="shortcut icon" href="img/nerv.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script language="javascript" type="text/javascript"> 
-        window.location.href='../404.html?lang=zh-cn';
-    </script>
+	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
+	<script src="lib/jquery-1.7.2.js"></script>
+    <script src="lib/change-display-lang.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/wip.css" />
+    <link rel="stylesheet" href="../css/wip.css" />
 	<title>Deep Dark Lab</title>
 </head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" id="nav-left" href="index.html">
+                <img src="img/deepdarklab_b.png" alt="" class="logo" id="logo">
+                <img src="../img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="index.html" class="tag" id="tag-home">Home</a>
+                    <a href="archive.html" class="tag" id="tag-archive">Archive</a>
+                    <a href="project.html" class="tag" id="tag-project">Project</a>
+                    <a href="about.html" class="tag" id="tag-about">About</a>
+                    <a href="login.html" class="tag" id="tag-login">Internal Login</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="title" style="display: none;"></div>
+        <div class="sos-logo-container"><img src="img/sos.png" alt="" class="sos-logo"><img src="../img/sos.png" alt="" class="sos-logo"></div>
+        <div class="main-title">404 Not Found (´ﾟдﾟ`)</div>
+        <div class="sub-title">The page you requested no longer exists on our site.</br>Please check if the URL you spelled has any missing.</div>
+        <a id="homepage-button" href="#" >Back To Home</a>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <span class="copyright">Deep Dark Lab Powered 1982-2049</span>
+            <span class="footer-tags">
+                <a href="https://ys.mihoyo.com/main/">Links</a>
+                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
+                <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+	var isVisible = false;
+	var isVisible1 = false;
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[class=tag]").css("color","white");
+            $('#logo').attr("src","img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[class=tag]").css("color","black");
+            $('#logo').attr("src","img/deepdarklab_b.png");
+		}
+	});
+	const mediaQuery = window.matchMedia('(max-width: 850px)')
+    if (mediaQuery.matches){
+        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
+    }
+</script>
+<script>
+    change_display_lang("login");
+</script>
+<script>
+    var homepage_url = document.getElementById("tag-home");
+    var homepage_button = document.getElementById("homepage-button")
+    homepage_url = homepage_url.getAttribute("href")
+    homepage_button.setAttribute("href",homepage_url);
+    console.log(homepage_url);
+</script>
