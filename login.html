@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
+	<script src="lib/jquery-1.7.2.js"></script>
+    <script src="lib/change-display-lang.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/login.css" />
+	<title>Deep Dark Lab</title>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" href="index.html" id="nav-left">
+                <img src="img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="index.html" class="tag" id="tag-home">Home</a>
+                    <a href="archive.html" class="tag" id="tag-archive">Archive</a>
+                    <a href="project.html" class="tag" id="tag-project">Project</a>
+                    <a href="about.html" class="tag" id="tag-about">About</a>
+                    <a href="login.html" class="tag" id="tag-login">Internal Login</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <span id="title" style="display: none;"></span>
+        <div class="login-page-container">
+            <div class="login-page-main">
+                <div class="login-page-left">
+                    <div class="login-page-logo-container">
+                        <img src="img/nerv2.png" alt="" class="login-logo">
+                    </div>
+                    <div class="login-page-left-title">NERV Internal Login System</div>
+                    <div class="login-page-discription"><span class="main-discription">The login service of Deep Dark Lab website is provided by NERV agency.</span>
+                        For more information about how NERV agency handles, stores and uses your personal information, please review the <a href="https://www.bilibili.com/video/BV1GJ411x7h7"><u>NERV Privacy Policy for Personal Information</u></a>.</div>
+                </div>
+                <div class="login-page-divider-container">
+                    <div class="login-page-divider"></div>
+                </div>
+                <div class="login-page-right">
+                    <div class="login-page-right-title">Account Login</div>
+                    <div class="login-section">
+                        <div class="login-section-account">
+                            <span for="" class="account-title login-section-title">Account</span>
+                            <input type="text" class="account-input input-box" id="account-content">
+                            <span class="account-alert login-alert" id="account-alert">Please enter your Nerv ID</span>
+                        </div>
+                        <div class="login-section-password">
+                            <span for="" class="password-title login-section-title">Password</span>
+                            <input type="text" class="password-input input-box" id="password-content">
+                            <span class="password-alert login-alert" id="password-alert"></span>
+                            <div class="remember-me">
+                                <input type="checkbox" class="remember-me-checkbox"><span class="remember-me-discription">Remember me for 3 days.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="submit-button" type="submit" onclick="login('sign_in')">Sign In</button>
+                    <div id="login-information"></div>
+                    <a href="javascript:void(0)" class="register-discription" onclick="login('forget')">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-content">
+            <span class="copyright">Deep Dark Lab Powered 1982-2049</span>
+            <span class="footer-tags">
+                <a href="https://ys.mihoyo.com/main/">Links</a>
+                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
+                <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+	var isVisible = false;
+	var isVisible1 = false;
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[class=tag]").css("color","white");
+            $('#logo').attr("src","img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[class=tag]").css("color","black");
+            $('#logo').attr("src","img/deepdarklab_b.png");
+		}
+	});
+	const mediaQuery = window.matchMedia('(max-width: 850px)')
+    if (mediaQuery.matches){
+        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
+    }
+</script>
+<script>
+    function login(i){
+        if(i=='forget') 
+        {
+            document.getElementById('login-information').innerHTML='*To recover your account, please contact the NERV agency in your local area with valid documents.';
+            $("[class=register-discription]").css("margin-top","8px")
+        }
+        let account_check = false;
+        let password_check = false;
+        if(i=='sign_in'){
+            login_information = document.getElementById('login-information');
+
+            account_alert=document.getElementById('account-alert');
+            let account_content = [];
+            account_content= document.getElementById('account-content').value;
+            console.log(account_content.length);
+
+            password_alert=document.getElementById('password-alert');
+            let password_content = [];
+            password_content=document.getElementById('password-content').value;
+            console.log(password_content.length);
+
+            if(account_content.length<8 || account_content.length>16)
+                {
+                    account_alert.innerHTML='*The NERV ID contains 8 to 16 characters';
+                    account_alert.style.color='rgb(160, 0, 0)';
+                }
+            else{
+                    account_alert.innerHTML='Please enter your Nerv ID';
+                    account_alert.style.color='rgb(95, 95, 95)';
+                    account_check = true;
+                    login_information.innerHTML='';
+                }
+            if(password_content.length<8 || password_content.length>25)
+                {
+                    password_alert.innerHTML='*Combination of 8~25 (upper/lowercase)letters, numbers, and symbols without space.';
+                    password_alert.style.color='rgb(160, 0, 0)';
+                    password_alert.style.display='inline-block';
+                    $("[class=login-section]").css("margin-bottom","12px")
+                }
+            else{
+                    password_alert.innerHTML='';
+                    password_alert.style.display='none';
+                    password_check = true;
+                    login_information.innerHTML='';
+                }
+            if(account_check == true && password_check == true){
+                document.getElementById('login-information').innerHTML='*Incorrect username or password.';
+                $("[class=register-discription]").css("margin-top","10px")
+            }
+        }
+    }
+</script>
+<script>
+    change_display_lang(login);
+</script>

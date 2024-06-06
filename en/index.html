@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="../img/nerv.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
+	<script src="../lib/jquery-1.7.2.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/index.css" />
+	<title>Deep Dark Lab</title>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <div class="nav-content">
+            <a class="nav-left" href="index.html">
+                    <img src="../img/deepdarklab_b.png" alt="" class="logo" id="logo">
+            </a>
+            <div class="nav-center">              
+            </div>
+            <div class="nav-right">
+                <div class="tag-list">
+                    <a href="../archive.html" class="tag" id="tag">Archive</a>
+                    <a href="project.html" class="tag" id="tag">Projects</a>
+                    <a href="../about.html" class="tag" id="tag">About</a>
+                    <a href="../login.html" class="tag" id="tag">Internal Login</a>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="section-welcome">
+        <div class="intro">
+            <div class="welcome">
+                <div class="pre-title">Hi there! &nbsp;Welcome to</div>
+                <div class="title main-title">Deep Dark Lab</div>
+                <div class="title sub-title">The Official Portal</div>
+                <div class="discription">
+                    You'll Become a Philosopher</br>
+                    Deep Dark Fantasies
+                </div>
+            </div>
+            <div class="links">
+                <a href="../about.html" class="about">About Deep Dark Lab</a>
+            </div>
+        </div>
+        <div class="logo-container">
+            <!--<img src="img/Aperture-logo.png" alt="" class="right-logo">-->
+            <img src="../img/waraiotoko2.gif" alt="" class="right-logo">
+        </div>
+    </div>
+    <div class="slogan-container">
+        <div class="slogan">"Do you like <span style="color: rgb(65, 67, 212);">Van</span> you see?"
+            </br><a href="archive.html" class="archive-link" style="margin-top: 30px;display: block;"><span style="color: rgb(68, 68, 68);">> Visit our</span> Minecraft Archive Library</a>
+        </div>
+        <div class="avatar-container">
+            <a href="../about.html"><img class="avatar" src="../img/van-avater.png" alt=""></br>
+            <span class="avatar-intro"><span style="color:rgb(47, 47, 187)">Dr.</span> Van Darkholme</span>
+            </a>
+        </div>
+    </div>
+    <div class="divider-container"><div class="divider"></div></div>
+    <div class="section-server-query">
+        <div class="content">
+            <div class="pre-title">Server Information Query</div>
+            <div class="title">Quick Query</br>Without Login</div>
+            <div class="discription">Query server information through the website,</br>support to query server status, player list and other information.</div>
+            <div class="links"><a href="server-query.html" class="link-button">View Project</a></div>
+            
+        </div>
+        <img class="image-back" src="../img/webquery.png" alt=""><img class="image" src="../img/Chain_Command_Block.webp" alt="" id="command_block">
+    </div>
+    <div class="section-archive">
+        <div class="content">
+            <div class="title">Archive Library</div>
+            <div class="discription">Sync from Cloud</br>at<span style="color: rgb(131, 40, 216);"> Lightning Speed</span></div>
+            <div class="top-card-container">
+                <div class="top-card">
+                    <h3 class="card-name">Archive Backup</h3>
+                    <div class="card-discription">Back it up<br>to the cloud, so it's<br>never lost.</div>
+                </div>
+            </div>
+            <div class="subcard-container">
+                <div class="subcard1">
+                    <h3 class="card-name">Supported by Aliyun Drive</h3>
+                    <div class="card-discription">High Speed<br><span style="color: rgb(154, 162, 226);">Without Limit.</span></div>
+                    <img src="../img/aliyun1.png" alt="" class="aliyun-img">
+                    
+                </div>
+                <!--<div class="subcard2">
+                    <h3 class="card-name">感觉不如原神</h3>
+                    <div class="card-discription">该写什么<br>其实，<br>我也不知道。</span></div>                   
+                </div>-->
+                <div class="subcard2">
+                    <h3 class="card-name">Mod Installation</h3>
+                    <div class="card-discription">Required Mods<br><span style="color: rgb(206, 127, 63);">One-Click</span> Sync.</div>  
+                    <img src="../img/Java-Logo.png" alt="" class="java-logo-img">
+                                     
+                </div>
+            </div>
+            <div class="links"><a href="../archive.html" class="link-button">All Minecraft Archives ></a></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <span class="copyright">
+                Deep Dark Lab Powered 1982-2049
+                <a href="https://ys.mihoyo.com/main/">Links</a>
+                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
+                <a href="https://ys.mihoyo.com/main/company/privacy" style="margin-right: 25px;">Privacy Policy</a>
+            </span>
+            <a href="../region.html?lang=en" >
+                <span id="change-region">
+                    <img src="../img/language1.png" style="height: 20px; position:absolute;">
+                    <span style="margin-left: 22px; color: white;">English Language</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+	var isVisible = false;
+	var isVisible1 = false;
+	$(window).scroll(function(){
+		var shouldBeVisible = $(window).scrollTop()>20;
+		if (shouldBeVisible && !isVisible) {
+			isVisible = true;
+			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            $("[id=tag]").css("color","white");
+            $('#logo').attr("src","../img/deepdarklab_w.png");
+		} else if (isVisible && !shouldBeVisible) {
+			isVisible = false;
+			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            $("[id=tag]").css("color","black");
+            $('#logo').attr("src","../img/deepdarklab_b.png");
+		}
+        var shouldBeVisible1 = $(window).scrollTop()>980;
+		if (shouldBeVisible1 && !isVisible1) {
+			isVisible1 = true;
+            $('#command_block').attr("src","../img/Impulse_Command_Block.webp");
+		} else if (isVisible1 && !shouldBeVisible1) {
+			isVisible1 = false;
+            $('#command_block').attr("src","../img/Chain_Command_Block.webp");
+		}
+	});
+	const mediaQuery = window.matchMedia('(max-width: 850px)')
+    if (mediaQuery.matches){
+        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
+    }
+</script>
