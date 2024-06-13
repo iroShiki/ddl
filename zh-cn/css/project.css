@@ -203,6 +203,11 @@ a{
     font-weight: bold;
     color: rgba(0, 0, 0, 0.479);
 }
+.project-info-dot{
+    font-size: 18px;
+    color: rgb(7, 196, 0);
+    margin-right: 1px;
+}
 .main-right{
     width: 25%;
 }
