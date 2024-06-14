@@ -125,8 +125,8 @@
             </span>
             <a href="../region.html?lang=zh-cn" >
                 <span id="change-region">
-                    <img src="../img/language1.png" style="height: 20px; position:absolute;">
-                    <span style="margin-left: 22px; color: white;">Simplified Chinese/简体中文</span>
+                    <img src="../img/change_region_b.png" style="height: 18px; position:absolute;">
+                    <span style="margin-left: 22px; color: rgb(0, 0, 0);">Simplified Chinese/简体中文</span>
                 </span>
             </a>
         </div>
@@ -136,32 +136,7 @@
 <script>
 </script>
 <script>
-	var isVisible = false;
-    const mediaQuery = window.matchMedia('(min-width: 850px)')
-	$(window).scroll(function(){
-		var shouldBeVisible = $(window).scrollTop()>20;
-		if (shouldBeVisible && !isVisible) {
-			isVisible = true;
-            if (mediaQuery.matches) {
-                $('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
-            }
-            else{
-                $('[id=nav]').css("background-color","rgb(36, 36, 36)");
-            }
-            $('[id=menu]').css("background-color","rgba(45, 45, 45)");
-            $("[id=tag]").css("color","white");
-            $('#logo').attr("src","../img/deepdarklab_w.png");
-		} else if (isVisible && !shouldBeVisible) {
-			isVisible = false;
-            if (mediaQuery.matches) {
-			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
-            }
-            else{$('[id=nav]').css("background-color","rgb(255, 255, 255)");}
-            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
-            $("[id=tag]").css("color","black");
-            $('#logo').attr("src","../img/deepdarklab_b.png");
-		}
-	});
+
     if (!mediaQuery.matches){
         alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
     }
