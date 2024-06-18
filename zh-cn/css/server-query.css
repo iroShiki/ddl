@@ -240,14 +240,6 @@ a{
 .version{background-image: url(../../img/mc-icons/crafting-table.png);background-color: rgb(179, 137, 83);}
 .mods{background-image: url(../../img/mc-icons/anvil.png);background-color: rgb(179, 83, 155);}
 .player-list{background-image: url(../../img/mc-icons/bed.png);background-color: rgb(117, 83, 179);}
-.footer-content{
-    margin-top: 80px;
-    max-width: 1200px;
-    width:90%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
 .query-button{
     padding:16px 0px;
     color: rgb(24, 24, 24);
@@ -328,29 +320,87 @@ a{
 .pop-up:target {
     display: block;
 }
+.footer-mobile{
+    display: none;
+}
+
 .footer{
     width:100%;
-    height:170px;
-    background-color: rgb(36, 36, 36);
-    display:flex;
-    align-content: center;
+    color: white;
+    background-color: black;
+}
+.footer-content-container{
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+    display: flex;
     justify-content: center;
+    height:550px;
 }
-.copyright{
-    display: inline-block;
-    color: rgb(189, 189, 189);
+.footer-content{
+    width: 90%;
+    max-width: 1200px;
 }
-.copyright a{
-    color: white;
-    margin-left: 40px;
+.footer-title{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(185, 185, 185);
 }
-#change-region a{
-    color: white;
-    display: inline-block;
+.footer-divider{
+    width: 100%;
+    height:1px;
+    background-color: rgb(63, 63, 63);
+    margin-top: 30px;
+}
+.footer-nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav-left{
+    margin-top: 60px;
+    width: 60%;
+}
+.footer-nav-column-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-nav-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer-nav-content {
+    margin-top: 12px;
+}
+.footer-nav-content a{
+    display: block;
+    color: rgb(204, 204, 204);
+    line-height: 2.5;
+    font-size: 15px;
+}
+.footer-nav-content a:hover{
+    color: rgb(255, 255, 255);
+    -webkit-transition: all 150ms linear;
+    -ms-transition: all 150ms linear;
+    transition: all 150ms linear;
+}
+.footer-nav-region-container{
+    width: 80%;
+}
+.footer-nav-region-title{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-top: 50px;
+    color: rgb(218, 218, 218);
+}
+.change-region-wrap{
+    margin-top: 30px;
+    display: block;
 }
 #change-region{
-    padding: 15px 15px;
-    font-size: 95%;
+    padding: 12px 15px;
+    font-size: 14px;
     border: 1px solid rgba(161, 161, 161, 0.425);
     -webkit-transition: all 100ms linear;
     -ms-transition: all 100ms linear;
@@ -358,4 +408,40 @@ a{
 }
 #change-region:hover{
     border: 1px solid rgb(231, 231, 231);
+}
+.footer-nav-right{
+    width: 40%;
+    margin-top: 50px;
+    background-image: url('../../img/aperture-logo-footer.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.footer-legal-container{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+}
+.footer-legal{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 15px;
+    max-width: 1200px;
+    color: rgb(160, 160, 160);
+}
+.footer-legal a{
+    color: rgb(196, 196, 196);
+    margin-left: 70px;
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+}
+.footer-legal a:hover{
+    color: rgb(255, 255, 255);
+}
+.inline{
+    display: inline;
 }
