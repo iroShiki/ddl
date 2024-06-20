@@ -241,29 +241,29 @@ a{
 .mods{background-image: url(../../img/mc-icons/anvil.png);background-color: rgb(179, 83, 155);}
 .player-list{background-image: url(../../img/mc-icons/bed.png);background-color: rgb(117, 83, 179);}
 .query-button{
-    padding:16px 0px;
+    padding:17px 0px;
     color: rgb(24, 24, 24);
     font-weight: bold;
     background-color: rgb(202, 202, 202);
     border-radius:30px;
     outline:none;
     font-family: simhei;
-    font-size: 101%;
+    font-size: 17px;
     -webkit-transition: all 100ms linear;
     -ms-transition: all 100ms linear;
     transition: all 100ms linear;
-    width:145px;
+    width:150px;
     display: flex;
     justify-content: center;
 }
 #button-icon{
-    height:19px;
+    height:20px;
     display: none;
     align-content: center;
 }
 #button-text{display: inline-block;}
 .query-button-container{
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 .about-link{
     font-weight: bold;
