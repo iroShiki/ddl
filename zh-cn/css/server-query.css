@@ -240,6 +240,9 @@ a{
 .version{background-image: url(../../img/mc-icons/crafting-table.png);background-color: rgb(179, 137, 83);}
 .mods{background-image: url(../../img/mc-icons/anvil.png);background-color: rgb(179, 83, 155);}
 .player-list{background-image: url(../../img/mc-icons/bed.png);background-color: rgb(117, 83, 179);}
+#r-name{
+    text-shadow: 1px -1px 0 #00000034, 1px -1px 0 #00000034, -1px 1px 0 #00000034, 1px 1px 0 #00000034;
+}
 .query-button{
     padding:17px 0px;
     color: rgb(24, 24, 24);

@@ -128,7 +128,7 @@ a{
 }
 .title-container .logo{
     height:3.5%;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 4px;
 }
 .title-container .title{
@@ -169,7 +169,6 @@ a{
 .query-main-title{
     margin-right: 8px;
 }
-#r-name{font-size: 60%;}
 .query-subtitle{
     width: 90%;
     max-width: 1200px;
@@ -240,6 +239,9 @@ a{
 .version{background-image: url(../../img/mc-icons/crafting-table.png);background-color: rgb(179, 137, 83);}
 .mods{background-image: url(../../img/mc-icons/anvil.png);background-color: rgb(179, 83, 155);}
 .player-list{background-image: url(../../img/mc-icons/bed.png);background-color: rgb(117, 83, 179);}
+#r-name{
+    text-shadow: none;
+}
 .query-button{
     padding:16px 0px;
     color: rgb(24, 24, 24);
