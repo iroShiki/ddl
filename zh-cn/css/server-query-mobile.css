@@ -122,6 +122,9 @@ a{
     background-image: linear-gradient(to left, rgba(255,255,255,0),rgba(0, 0, 0, 0.747), rgb(0, 0, 0)),url(../../img/minecraft-server.jpg);
     background-size: cover;
 }
+.tag-back-to-project{
+    display: none;
+}
 .title-container .info{
     margin-left: 10%;
     height:120%;
