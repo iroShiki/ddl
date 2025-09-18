@@ -6,13 +6,15 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--<script src="https://cdn.staticfile.net/jquery/1.7.2/jquery.min.js"></script>-->
+    <script src="../lib/s-to-html-color.js" type="text/javascript"></script>
+    <script src="../lib/minecraft-server-info-query.js"></script>
 	<script src="../lib/jquery-1.7.2.js"></script>
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/index-footer.css" />
+	<link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/server-query-mobile.css" />
 	<title>Deep Dark Lab</title>
 </head>
-<body>
+<body id="body">
     <div class="nav" id="nav">
         <div class="nav-content">
             <a class="nav-left" href="index.html">
@@ -22,90 +24,63 @@
             </div>
             <div class="nav-right">
                 <div class="tag-list">
-                    <a href="../archive.html" class="tag" id="tag">Archive</a>
+                    <a href="index.html" class="tag" id="tag">Home</a>
                     <div class="tag tag-project">
                         <a href="project.html" id="tag">Project</a>
-                        <div class="dropdown-project" id="menu">
-                            <a href="server-query.html" class="dropdown-project-tag first-tag" id="tag">Server Info Query</a>
-                            <a href="archive.html" class="dropdown-project-tag last-tag" id="tag">Minecraft Archives</a>
-                        </div>
                     </div>
                     <a href="../about.html" class="tag" id="tag">About</a>
-                    <a href="../login.html" class="tag" id="tag">Internal Login</a>
+                    <a href="../login.html" class="tag" id="tag" style="padding-right: 5px;">Inner Login</a>
                 </div>             
             </div>
-        </div>
-    </div>
-    <div class="section-welcome">
-        <div class="intro">
-            <div class="welcome">
-                <div class="pre-title">Hi there! &nbsp;Welcome to</div>
-                <div class="title main-title">Deep Dark Lab</div>
-                <div class="title sub-title">The Official Portal</div>
-                <div class="discription">
-                    You'll Become a Philosopher</br>
-                    Deep Dark Fantasies
+            <div class="dropdown">
+                <span id="tag" class="menu-open-button" onclick="menu_open()">☰</span>
+                <span id="tag" class="menu-close-button" onclick="menu_close()">✕</span>
+                <div class="dropdown-content" id="menu">
+                    <a href="index.html" class="menu-tag" id="tag">首页</a>
+                    <a href="archive.html" class="menu-tag" id="tag">存档</a>
+                    <a href="project.html" class="menu-tag" id="tag">项目</a>
+                    <a href="about.html" class="menu-tag" id="tag">关于</a>
+                    <a href="login.html" class="menu-tag" id="tag">会员登入</a>
+                    <a href="../region.html" class="menu-tag" id="tag">Language</a>
+                    <img class="menu-logo" src="../img/nerv2.png" alt="">
                 </div>
             </div>
-            <div class="links">
-                <a href="../about.html" class="about">About Deep Dark Lab</a>
-            </div>
-        </div>
-        <div class="logo-container">
-            <!--<img src="img/Aperture-logo.png" alt="" class="right-logo">-->
-            <img src="../img/waraiotoko2.gif" alt="" class="right-logo">
         </div>
     </div>
-    <div class="slogan-container">
-        <div class="slogan">"Do you like <span style="color: rgb(65, 67, 212);">Van</span> you see?"
-            </br><a href="archive.html" class="archive-link" style="margin-top: 30px;display: block;"><span style="color: rgb(68, 68, 68);">> Visit our</span> Minecraft Archive Library</a>
+    <div class="main">
+        <div class="main-title-container">
+            <img src="../img/Aperture-logo.png" alt="" class="main-title-logo">
+            Deep Dark Lab Project Center
         </div>
-        <div class="avatar-container">
-            <a href="../about.html"><img class="avatar" src="../img/van-avater.png" alt=""></br>
-            <span class="avatar-intro"><span style="color:rgb(47, 47, 187)">Dr.</span> Van Darkholme</span>
-            </a>
-        </div>
-    </div>
-    <div class="divider-container"><div class="divider"></div></div>
-    <div class="section-server-query">
-        <div class="content">
-            <div class="pre-title">Server Information Query</div>
-            <div class="title">Quick Query</br>Without Login</div>
-            <div class="discription">Query server information through the website,</br>support to query server status, player list and other information.</div>
-            <div class="links"><a href="server-query.html" class="link-button">View Project</a></div>
-            
-        </div>
-        <img class="image-back" src="../img/webquery.png" alt=""><img class="image" src="../img/Chain_Command_Block.webp" alt="" id="command_block">
-    </div>
-    <div class="section-archive">
-        <div class="content">
-            <div class="title">Archive Library</div>
-            <div class="discription">Sync from Cloud</br>at<span style="color: rgb(131, 40, 216);"> Lightning Speed</span></div>
-            <div class="top-card-container">
-                <div class="top-card">
-                    <h3 class="card-name">Archive Backup</h3>
-                    <div class="card-discription">Back it up<br>to the cloud, so it's<br>never lost.</div>
+        <div class="divider"></div>
+        <div class="main-content">
+            <div class="main-left">
+                <div class="main-left-title">All Projects</div>
+                <div class="project-container">
+                    <div class="project">
+                        <div class="project-content">
+                            <a class="project-title" href="server-query.html">Minecraft Server Information Query System</a>
+                            <div class="project-status">Public</div>
+                            <div class="project-discription">Query server status information through the website,
+                                including server online number,online list, server version,
+                                required modules, game mode and other information.</div>
+                            <div class="project-info"><span class="span" style="font-size: 16px;color: rgb(7, 196, 0);">•</span> Updated 1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-content">
+                            <a class="project-title" href="archive.html">Minecraft Archive Library</a>
+                            <div class="project-status">Public</div>
+                            <div class="project-discription">Download previous Minecraft saves from the cloud database.</div>
+                            <div class="project-info"><span class="span" style="font-size: 16px;color: rgb(7, 196, 0);">•</span> Updated 1 day ago</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="subcard-container">
-                <div class="subcard1">
-                    <h3 class="card-name">Supported by Aliyun Drive</h3>
-                    <div class="card-discription">High Speed<br><span style="color: rgb(154, 162, 226);">Without Limit.</span></div>
-                    <img src="../img/aliyun1.png" alt="" class="aliyun-img">
-                    
-                </div>
-                <!--<div class="subcard2">
-                    <h3 class="card-name">感觉不如原神</h3>
-                    <div class="card-discription">该写什么<br>其实，<br>我也不知道。</span></div>                   
-                </div>-->
-                <div class="subcard2">
-                    <h3 class="card-name">Mod Installation</h3>
-                    <div class="card-discription">Required Mods<br><span style="color: rgb(206, 127, 63);">One-Click</span> Sync.</div>  
-                    <img src="../img/Java-Logo.png" alt="" class="java-logo-img">
-                                     
-                </div>
+            <div class="main-right">
+                <div class="main-right-title">About</div>
+                <div class="main-right-about">No further information.</div>
             </div>
-            <div class="links"><a href="../archive.html" class="link-button">All Minecraft Archives ></a></div>
         </div>
     </div>
     <div class="footer">
@@ -202,33 +177,52 @@
         </div>
     </div>
 </body>
+
+<script>
+serverquery()
+</script>
 <script>
 	var isVisible = false;
-	var isVisible1 = false;
+    const mediaQuery = window.matchMedia('(min-width: 850px)')
 	$(window).scroll(function(){
 		var shouldBeVisible = $(window).scrollTop()>20;
 		if (shouldBeVisible && !isVisible) {
 			isVisible = true;
-			$('#nav').css("background-color","rgba(0, 0, 0, 0.7)");
+            if (mediaQuery.matches) {
+                $('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
+            }
+            else{
+                $('[id=nav]').css("background-color","rgb(36, 36, 36)");
+            }
+            $('[id=menu]').css("background-color","rgba(45, 45, 45)");
             $("[id=tag]").css("color","white");
             $('#logo').attr("src","../img/deepdarklab_w.png");
 		} else if (isVisible && !shouldBeVisible) {
 			isVisible = false;
-			$('#nav').css("background-color","rgba(255, 255, 255, 0.575)");
+            if (mediaQuery.matches) {
+			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
+            }
+            else{$('[id=nav]').css("background-color","rgb(255, 255, 255)");}
+            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
             $("[id=tag]").css("color","black");
             $('#logo').attr("src","../img/deepdarklab_b.png");
 		}
-        var shouldBeVisible1 = $(window).scrollTop()>980;
-		if (shouldBeVisible1 && !isVisible1) {
-			isVisible1 = true;
-            $('#command_block').attr("src","../img/Impulse_Command_Block.webp");
-		} else if (isVisible1 && !shouldBeVisible1) {
-			isVisible1 = false;
-            $('#command_block').attr("src","../img/Chain_Command_Block.webp");
-		}
 	});
-	const mediaQuery = window.matchMedia('(max-width: 850px)')
-    if (mediaQuery.matches){
-        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过PC端访问");
+</script>
+<script>
+    function menu_open(){
+        $('.menu-open-button').css('display','none');
+        $('.menu-close-button').css('display','block');
+        $('.dropdown-content').css('display','block');
+    }
+    function menu_close(){
+        $('.menu-open-button').css('display','block');
+        $('.menu-close-button').css('display','none');
+        $('.dropdown-content').css('display','none');
     }
 </script>
+<!--<script>
+    function show_menu_project(){
+        $('.dropdown-project').css('display','block');
+    }
+</script>-->

@@ -5,7 +5,7 @@ body {
     align-items: center;
     width: 100%;
     background-color: rgb(245, 245, 245);
-    font-family: Noto Sans, Noto Sans SC, sans-serif;
+    font-family: TTNormsProMedium, MyriadSemibold, Segoe UI, Arial, PingFang TC, Microsoft JhengHei, sans-serif;
 }
 @font-face {
     font-family: 'Minecraft R';
@@ -27,7 +27,7 @@ button{
     height:60px;
     width: 100%;
     z-index: 2;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.575);
     -webkit-transition: all 100ms linear;
     -ms-transition: all 100ms linear;
     transition: all 100ms linear;
@@ -48,6 +48,7 @@ a{
     justify-content: space-between;
     z-index: 2;
     font-size: 100%;
+    font-weight: 500;
 }
 .nav-left{
     display: flex;
@@ -92,7 +93,7 @@ a{
 .dropdown-project{
     position: absolute;
     top: 53px;
-    right:150px;
+    right:110px;
     z-index: 2;
     background-color: white;
     backdrop-filter: blur(50px);
@@ -126,8 +127,7 @@ a{
     width: 80%;
     max-width: 1200px;
     min-height: calc(100vh - 240px);
-    margin-top: 100px;
-    margin-bottom: 70px;
+    margin-top: 110px;
 }
 .main-title-logo{
     height:60px;
@@ -154,28 +154,28 @@ a{
     width: 68%;
 }
 .main-left-title{
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     margin-left: 10px;
 }
 .project-container{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .project{
     width: 100%;
-    height:145px;
+    height:130px;
     border: 1px solid rgba(0, 0, 0, 0.212);
     border-radius: 12px;
     background-color: white;
     margin-bottom: 18px;
 }
 .project-content{
-    margin: 26px 27px;
+    margin: 20px 25px;
     position: relative;
-    height: 95px;
+    height: 90px;
 }
 .project-title{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color:rgb(30, 103, 240);
     display: inline-block;
@@ -183,18 +183,18 @@ a{
 .project-status{
     display: inline-block;
     font-size: 12px;
-    color:rgba(0, 0, 0, 0.514);
+    color:rgba(0, 0, 0, 0.445);
     font-weight: bold;
     padding: 2px 5px;
     border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(0, 0, 0, 0.212);
     position: relative;
-    bottom: 2px;
-    margin-left: 4px;
+    bottom: 1.5px;
+    margin-left: 2px;
 }
 .project-discription{
-    font-size: 15px;
-    margin-top: 8px;
+    font-size: 14px;
+    margin-top: 6px;
 }
 .project-info{
     position:absolute;
@@ -203,20 +203,55 @@ a{
     font-weight: bold;
     color: rgba(0, 0, 0, 0.479);
 }
-.project-info-dot{
-    font-size: 18px;
-    color: rgb(7, 196, 0);
-    margin-right: 1px;
-}
 .main-right{
-    width: 25%;
+    width: 26%;
 }
 .main-right-title{
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
 }
 .main-right-about{
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 1.6;
     margin-top: 18px;
+}
+/*Footer Section*/
+.footer{
+    width:100%;
+    height:130px;
+    background-color: rgba(36, 36, 36, 0.938);
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+.footer-content{
+    margin-top: 60px;
+    max-width: 1200px;
+    width:90%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    display: inline-block;
+    color: rgb(189, 189, 189);
+}
+.copyright a{
+    color: white;
+    margin-left: 40px;
+}
+#change-region a{
+    color: white;
+    display: inline-block;
+}
+#change-region{
+    padding: 15px 15px;
+    font-size: 95%;
+    border: 1px solid rgba(161, 161, 161, 0.425);
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+}
+#change-region:hover{
+    border: 1px solid rgb(231, 231, 231);
 }
