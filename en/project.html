@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 	<link rel="shortcut icon" href="../img/nerv.png">
 	<meta charset="UTF-8">
@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="css/project.css" />
     <link rel="stylesheet" href="css/server-query-mobile.css" />
+    <link rel="stylesheet" href="css/project-footer.css" />
 	<title>Deep Dark Lab</title>
 </head>
 <body id="body">
@@ -27,11 +28,16 @@
                     <a href="index.html" class="tag" id="tag">Home</a>
                     <div class="tag tag-project">
                         <a href="project.html" id="tag">Project</a>
+                        <div class="dropdown-project" id="menu">
+                            <a href="server-query.html" class="dropdown-project-tag first-tag" id="tag">Server Info Query</a>
+                            <a href="archive.html" class="dropdown-project-tag last-tag" id="tag">Minecraft Archives</a>
+                        </div>
                     </div>
-                    <a href="../about.html" class="tag" id="tag">About</a>
-                    <a href="../login.html" class="tag" id="tag" style="padding-right: 5px;">Inner Login</a>
+                    <a href="about.html" class="tag" id="tag">About</a>
+                    <a href="../login.html?lang=zh-cn" class="tag" id="tag" style="padding-right: 5px;">Inner Login</a>
                 </div>             
             </div>
+            
             <div class="dropdown">
                 <span id="tag" class="menu-open-button" onclick="menu_open()">☰</span>
                 <span id="tag" class="menu-close-button" onclick="menu_close()">✕</span>
@@ -55,7 +61,7 @@
         <div class="divider"></div>
         <div class="main-content">
             <div class="main-left">
-                <div class="main-left-title">All Projects</div>
+                <div class="main-left-title">Popular Projects</div>
                 <div class="project-container">
                     <div class="project">
                         <div class="project-content">
@@ -76,6 +82,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="main-left-title" style="margin-top: 32px;">All Projects</div>
+                <div class="project-container">
+                    <div class="project">
+                        <div class="project-content">
+                            <a class="project-title" href="server-query.html">Minecraft Server Information Query System</a>
+                            <div class="project-status">Public</div>
+                            <div class="project-discription">Query server status information through the website,
+                                including server online number,online list, server version,
+                                required modules, game mode and other information.</div>
+                            <div class="project-info"><span class="span" style="font-size: 16px;color: rgb(7, 196, 0);">•</span> Updated 1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-content">
+                            <a class="project-title" href="archive.html">Minecraft Archive Library</a>
+                            <div class="project-status">Public</div>
+                            <div class="project-discription">Download previous Minecraft saves from the cloud database.</div>
+                            <div class="project-info"><span class="span" style="font-size: 16px;color: rgb(7, 196, 0);">•</span> Updated 1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-content">
+                            <a class="project-title" href="https://github.com/vanillaez/ddl">Deep Dark Lab Website</a>
+                            <div class="project-status">Public</div>
+                            <div class="project-discription">Deep Dark Lab Source Code. Project URL: https://github.com/vanillaez/ddl</div>
+                            <div class="project-info"><span class="project-info-dot">•</span>Updated 1 day ago</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="main-right">
                 <div class="main-right-title">About</div>
@@ -84,53 +119,91 @@
         </div>
     </div>
     <div class="footer">
-        <div class="footer-content">
-            <span class="copyright">
-                Deep Dark Lab Powered 1982-2049
-                <a href="https://ys.mihoyo.com/main/">Links</a>
-                <a href="https://ys.mihoyo.com/main/company/agreement">Terms of Use</a>
-                <a href="https://ys.mihoyo.com/main/company/privacy" style="margin-right: 25px;">Privacy Policy</a>
-            </span>
-            <a href="../region.html?lang=en" >
-                <span id="change-region">
-                    <img src="../img/language1.png" style="height: 20px; position:absolute;">
-                    <span style="margin-left: 22px; color: white;">English Language</span>
-                </span>
-            </a>
+        <div class="footer-content-container">
+            <div class="footer-content">
+                <div class="footer-title">
+                        Deep Dark Lab Official Website |&nbsp;&nbsp;Deep Dark Fantasies
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-nav-container">
+                    <div class="footer-nav-left">
+                        <div class="footer-nav-column-container">
+                            <div class="footer-nav-column">
+                                <div class="footer-nav-title">Project</div>
+                                <div class="footer-nav-content">
+                                    <a href="server-query.html">Server Info Query</a>
+                                    <a href="archive.html">Minecraft Archive Library</a>
+                                    <a href="project.html">View All Projects</a>
+                                </div>
+                            </div>
+                            <div class="footer-nav-column">
+                                <div class="footer-nav-title">Learn More</div>
+                                <div class="footer-nav-content">
+                                    <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
+                                    <a href="https://ys.mihoyo.com/main/company/agreement">Term of Use</a>
+                                    <a href="https://www.bilibili.com/video/BV1GJ411x7h7">Cookies, Ads, and Email</a>
+                                    <a href="https://www.bilibili.com/video/BV1GJ411x7h7">Law and Regulation</a>
+                                    <a href="about.html?lang=en">About Us</a>
+                                </div>
+                            </div>
+                            <div class="footer-nav-column">
+                                <div class="footer-nav-title">Support</div>
+                                <div class="footer-nav-content">
+                                    <a href="../login.html?lang=en">Internal Login</a>
+                                    <a href="../login.html?lang=en">Join Us</a>
+                                    <a href="mailto:contact@7chan.gay">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-nav-region-container">
+                            <div class="footer-nav-region-left">
+                                <div class="footer-nav-region-title">Switch your country or region</div>
+                                <div class="footer-nav-region-discription">Deep Dark Lab's service network spans the globe. Select your country or region here; privacy policies may vary depending on the service area.</div>
+                                <a href="../region.html?lang=en" class="change-region-wrap">
+                                            <span id="change-region">
+                                                <img src="../img/change_region_b.png" style="height: 18px; position:absolute;">
+                                                <span style="margin-left: 22px;">English</span>
+                                            </span>
+                                </a>
+                            </div>
+                            <div class="footer-nav-region-right">
+                                <div class="footer-nav-title footer-nav-region-title">About NERV</div>
+                                <div class="footer-nav-content">
+                                    <a href="https://evangelion.fandom.com/wiki/NERV">Learn about NERV</a>
+                                    <a href="https://www.bilibili.com/video/BV1GJ411x7h7">NERV Privacy Policy</a>
+                                    <a href="https://www.bilibili.com/video/BV1GJ411x7h7">NERV Term of Use</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-legal-container">
+            <div class="footer-legal">
+                <div class="footer-legal-left inline">
+                    Deep Dark Lab Powered 1982-2049 
+                </div>
+                <div class="footer-legal-right inline">
+                    <a href="https://ys.mihoyo.com/main/">Friendship Links</a>
+                    <a href="https://ys.mihoyo.com/main/company/agreement">Term of Use</a>
+                    <a href="https://ys.mihoyo.com/main/company/privacy">Privacy Policy</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 
 <script>
-serverquery()
 </script>
 <script>
-	var isVisible = false;
-    const mediaQuery = window.matchMedia('(min-width: 850px)')
-	$(window).scroll(function(){
-		var shouldBeVisible = $(window).scrollTop()>20;
-		if (shouldBeVisible && !isVisible) {
-			isVisible = true;
-            if (mediaQuery.matches) {
-                $('[id=nav]').css("background-color","rgba(0, 0, 0, 0.7)");
-            }
-            else{
-                $('[id=nav]').css("background-color","rgb(36, 36, 36)");
-            }
-            $('[id=menu]').css("background-color","rgba(45, 45, 45)");
-            $("[id=tag]").css("color","white");
-            $('#logo').attr("src","../img/deepdarklab_w.png");
-		} else if (isVisible && !shouldBeVisible) {
-			isVisible = false;
-            if (mediaQuery.matches) {
-			$('[id=nav]').css("background-color","rgba(255, 255, 255, 0.575)");
-            }
-            else{$('[id=nav]').css("background-color","rgb(255, 255, 255)");}
-            $('[id=menu]').css("background-color","rgba(255, 255, 255)");
-            $("[id=tag]").css("color","black");
-            $('#logo').attr("src","../img/deepdarklab_b.png");
-		}
-	});
+
+    if (!mediaQuery.matches){
+        alert("该页面暂未适配移动端(›´ω`‹ ) 请通过桌面端浏览器访问");
+    }
 </script>
 <script>
     function menu_open(){
